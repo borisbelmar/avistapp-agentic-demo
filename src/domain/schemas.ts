@@ -8,6 +8,8 @@ const password = z.string().min(8, ERROR_MESSAGES.WEAK_PASSWORD);
 
 export const registerSchema = z.object({ username, email, password });
 
+export const loginSchema = z.object({ email, password: z.string().min(1, "Ingresa tu contraseña.") });
+
 const coordinate = (limit: number) =>
   z
     .number({ error: ERROR_MESSAGES.INVALID_LOCATION })

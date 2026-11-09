@@ -149,6 +149,7 @@ CREATE TABLE votes (
 ## 8. UI
 
 - Estilos con `className` de NativeWind. `tailwind.config.js` incluye `app/**` y `src/**` en `content` y define los colores y tipografías que fije `4_DESIGN.md`.
+- **Escala:** NativeWind usa `rem` = 14 px por defecto; `metro.config.js` fija `inlineRem: 16` para que la escala de Tailwind coincida con la retícula de 4 px de DESIGN §4. Después de cambiarlo, reiniciar Metro con `--clear`.
 - Componentes propios en `src/components`; no se usa una librería de componentes.
 - Las fuentes se cargan con `useFonts` en el layout raíz; la pantalla de inicio (`expo-splash-screen`) se mantiene visible hasta que terminan de cargar y se restaura la sesión.
 - **Áreas seguras:** todas las pantallas usan `headerShown: false`, así que cada una resuelve su margen superior. Las pantallas de pestañas envuelven su contenido en `SafeAreaView` de `react-native-safe-area-context` con `edges={["top"]}` (el borde inferior lo maneja la barra de pestañas). Las pantallas apiladas con fila de encabezado propia (Nuevo avistamiento, Mis publicaciones) usan `pt-14` en esa fila. La cámara va de borde a borde y su botón cerrar usa `top-14`. No se usa el `SafeAreaView` de `react-native`.

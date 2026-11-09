@@ -12,10 +12,34 @@ import * as SplashScreen from "expo-splash-screen";
 import { SQLiteProvider } from "expo-sqlite";
 import { useEffect } from "react";
 
+import { SessionProvider, useSession } from "@/auth/SessionProvider";
 import { initDb } from "@/data/migrations";
 
 // En el nivel del módulo no hay contexto async: el .catch cumple el papel del try (STACK §6).
 SplashScreen.preventAutoHideAsync().catch(console.error);
+
+function RootNavigator() {
+  const { user, isLoading } = useSession();
+
+  // La pantalla de inicio se oculta cuando terminó de restaurarse la sesión (no solo las fuentes).
+  useEffect(() => {
+    if (!isLoading) SplashScreen.hide();
+  }, [isLoading]);
+
+  if (isLoading) return null;
+
+  return (
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Protected guard={!user}>
+        <Stack.Screen name="(auth)/login" />
+        <Stack.Screen name="(auth)/register" />
+      </Stack.Protected>
+      <Stack.Protected guard={!!user} redirectTo="/login">
+        <Stack.Screen name="(tabs)" options={{ presentation: "card" }} />
+      </Stack.Protected>
+    </Stack>
+  );
+}
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
@@ -28,14 +52,15 @@ export default function RootLayout() {
 
   useEffect(() => {
     if (error) console.error(error);
-    if (loaded || error) SplashScreen.hide();
-  }, [loaded, error]);
+  }, [error]);
 
   if (!loaded && !error) return null;
 
   return (
     <SQLiteProvider databaseName="avistapp.db" onInit={initDb}>
-      <Stack screenOptions={{ headerShown: false }} />
+      <SessionProvider>
+        <RootNavigator />
+      </SessionProvider>
     </SQLiteProvider>
   );
 }

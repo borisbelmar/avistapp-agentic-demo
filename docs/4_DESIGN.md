@@ -161,7 +161,8 @@ En todas las pantallas que cargan datos: mientras cargan se muestra un `Activity
 - **Iniciar sesión:** Correo, Contraseña, botón "Iniciar sesión" y enlace "¿No tienes cuenta? Regístrate".
 - **Crear cuenta:** Nombre de usuario, Correo, Contraseña, Confirmar contraseña, botón "Crear cuenta" y enlace "¿Ya tienes cuenta? Inicia sesión". Se pide confirmar la contraseña porque no existe recuperación de contraseña (fuera de alcance en el brief).
 - Validación con React Hook Form en modo `onTouched`: el error aparece al salir del campo o al enviar.
-- Correo: teclado `email-address`, sin mayúscula automática. Contraseñas: `secureTextEntry` y `textContentType` para el autocompletado del sistema.
+- Correo: teclado `email-address`, sin mayúscula automática. Contraseñas: `secureTextEntry` y `textContentType` para el autocompletado del sistema; un botón de ícono (`eye-outline`/`eye-off-outline`, 44×44 px, dentro del campo) alterna mostrarla u ocultarla.
+- Los errores que no son de un campo (`INVALID_CREDENTIALS`, error desconocido) aparecen sobre el botón principal, en un recuadro `danger-50` con texto `danger-600`. `EMAIL_TAKEN` y `USERNAME_TAKEN` aparecen bajo su campo.
 
 ### 7.2 Muro
 
@@ -303,7 +304,7 @@ Cada código de error de `2_DOMAIN.md` §6 se muestra con este texto.
 | `UNAUTHENTICATED` | Tu sesión terminó. Inicia sesión de nuevo. |
 | Error desconocido | Algo salió mal. Inténtalo de nuevo. |
 
-Validación solo de la interfaz: "Las contraseñas no coinciden."
+Validación solo de la interfaz: "Las contraseñas no coinciden." (Crear cuenta) e "Ingresa tu contraseña." (Iniciar sesión, contraseña vacía).
 
 ### Cámara y fallas del sistema
 
