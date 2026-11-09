@@ -67,7 +67,7 @@ Estados: **Pendiente** → **En curso** → **En revisión** → **Aprobada**. Q
 | # | Fase | Resultado visible al terminar | Estado |
 |---|---|---|---|
 | 0 | Inicializar el proyecto | Repositorio con el stack instalado y los comandos de calidad sin errores | Aprobada |
-| 1 | Levantar proyecto de prueba | La app abre en Expo Go con el tema, las fuentes y el área segura | Pendiente |
+| 1 | Levantar proyecto de prueba | La app abre en Expo Go con el tema, las fuentes y el área segura | En revisión |
 | 2 | Base local, dominio y catálogo | La app crea su base con el catálogo y el administrador; reglas puras probadas | Pendiente |
 | 3 | Login y registro | Crear cuenta, iniciar y cerrar sesión; pestañas Muro y Perfil | Pendiente |
 | 4 | Cámara y ubicación | Tomar una foto con GPS y verla en Nuevo avistamiento | Pendiente |
