@@ -1,0 +1,2752 @@
+[
+  {
+    "id": "rhea-pennata",
+    "commonName": "Ñandú",
+    "scientificName": "Rhea pennata"
+  },
+  {
+    "id": "nothoprocta-ornata",
+    "commonName": "Perdiz cordillerana",
+    "scientificName": "Nothoprocta ornata"
+  },
+  {
+    "id": "nothoprocta-perdicaria",
+    "commonName": "Perdiz chilena",
+    "scientificName": "Nothoprocta perdicaria"
+  },
+  {
+    "id": "nothoprocta-pentlandii",
+    "commonName": "Perdiz andina",
+    "scientificName": "Nothoprocta pentlandii"
+  },
+  {
+    "id": "eudromia-elegans",
+    "commonName": "Perdiz copetona",
+    "scientificName": "Eudromia elegans"
+  },
+  {
+    "id": "tinamotis-pentlandii",
+    "commonName": "Perdiz de la puna",
+    "scientificName": "Tinamotis pentlandii"
+  },
+  {
+    "id": "tinamotis-ingoufi",
+    "commonName": "Perdiz austral",
+    "scientificName": "Tinamotis ingoufi"
+  },
+  {
+    "id": "chauna-torquata",
+    "commonName": "Chajá",
+    "scientificName": "Chauna torquata"
+  },
+  {
+    "id": "dendrocygna-bicolor",
+    "commonName": "Pato silbón colorado",
+    "scientificName": "Dendrocygna bicolor"
+  },
+  {
+    "id": "dendrocygna-viduata",
+    "commonName": "Pato silbón pampa",
+    "scientificName": "Dendrocygna viduata"
+  },
+  {
+    "id": "dendrocygna-autumnalis",
+    "commonName": "Pato silbón de ala blanca",
+    "scientificName": "Dendrocygna autumnalis"
+  },
+  {
+    "id": "cygnus-melancoryphus",
+    "commonName": "Cisne de cuello negro",
+    "scientificName": "Cygnus melancoryphus"
+  },
+  {
+    "id": "coscoroba-coscoroba",
+    "commonName": "Cisne coscoroba",
+    "scientificName": "Coscoroba coscoroba"
+  },
+  {
+    "id": "oressochen-melanopterus",
+    "commonName": "Piuquén",
+    "scientificName": "Oressochen melanopterus"
+  },
+  {
+    "id": "chloephaga-picta",
+    "commonName": "Caiquén",
+    "scientificName": "Chloephaga picta"
+  },
+  {
+    "id": "chloephaga-hybrida",
+    "commonName": "Caranca",
+    "scientificName": "Chloephaga hybrida"
+  },
+  {
+    "id": "chloephaga-poliocephala",
+    "commonName": "Canquén común",
+    "scientificName": "Chloephaga poliocephala"
+  },
+  {
+    "id": "chloephaga-rubidiceps",
+    "commonName": "Canquén colorado",
+    "scientificName": "Chloephaga rubidiceps"
+  },
+  {
+    "id": "sarkidiornis-sylvicola",
+    "commonName": "Pato crestudo",
+    "scientificName": "Sarkidiornis sylvicola"
+  },
+  {
+    "id": "tachyeres-patachonicus",
+    "commonName": "Quetru volador",
+    "scientificName": "Tachyeres patachonicus"
+  },
+  {
+    "id": "tachyeres-pteneres",
+    "commonName": "Quetru no volador",
+    "scientificName": "Tachyeres pteneres"
+  },
+  {
+    "id": "lophonetta-specularoides",
+    "commonName": "Pato juarjual",
+    "scientificName": "Lophonetta specularoides"
+  },
+  {
+    "id": "speculanas-specularis",
+    "commonName": "Pato anteojillo",
+    "scientificName": "Speculanas specularis"
+  },
+  {
+    "id": "merganetta-armata",
+    "commonName": "Pato cortacorrientes",
+    "scientificName": "Merganetta armata"
+  },
+  {
+    "id": "spatula-puna",
+    "commonName": "Pato puna",
+    "scientificName": "Spatula puna"
+  },
+  {
+    "id": "spatula-versicolor",
+    "commonName": "Pato capuchino",
+    "scientificName": "Spatula versicolor"
+  },
+  {
+    "id": "spatula-platalea",
+    "commonName": "Pato cuchara",
+    "scientificName": "Spatula platalea"
+  },
+  {
+    "id": "spatula-clypeata",
+    "commonName": "Pato cuchara norteamericano",
+    "scientificName": "Spatula clypeata"
+  },
+  {
+    "id": "spatula-discors",
+    "commonName": "Pato de alas azules",
+    "scientificName": "Spatula discors"
+  },
+  {
+    "id": "spatula-cyanoptera",
+    "commonName": "Pato colorado",
+    "scientificName": "Spatula cyanoptera"
+  },
+  {
+    "id": "mareca-sibilatrix",
+    "commonName": "Pato real",
+    "scientificName": "Mareca sibilatrix"
+  },
+  {
+    "id": "anas-bahamensis",
+    "commonName": "Pato gargantillo",
+    "scientificName": "Anas bahamensis"
+  },
+  {
+    "id": "anas-georgica",
+    "commonName": "Pato jergón grande",
+    "scientificName": "Anas georgica"
+  },
+  {
+    "id": "anas-flavirostris",
+    "commonName": "Pato jergón chico",
+    "scientificName": "Anas flavirostris"
+  },
+  {
+    "id": "netta-peposaca",
+    "commonName": "Pato negro",
+    "scientificName": "Netta peposaca"
+  },
+  {
+    "id": "heteronetta-atricapilla",
+    "commonName": "Pato rinconero",
+    "scientificName": "Heteronetta atricapilla"
+  },
+  {
+    "id": "oxyura-jamaicensis",
+    "commonName": "Pato rana de pico ancho",
+    "scientificName": "Oxyura jamaicensis"
+  },
+  {
+    "id": "oxyura-vittata",
+    "commonName": "Pato rana de pico delgado",
+    "scientificName": "Oxyura vittata"
+  },
+  {
+    "id": "callipepla-californica",
+    "commonName": "Codorniz",
+    "scientificName": "Callipepla californica"
+  },
+  {
+    "id": "phasianus-colchicus",
+    "commonName": "Faisán de collar",
+    "scientificName": "Phasianus colchicus"
+  },
+  {
+    "id": "phoenicopterus-chilensis",
+    "commonName": "Flamenco chileno",
+    "scientificName": "Phoenicopterus chilensis"
+  },
+  {
+    "id": "phoenicoparrus-andinus",
+    "commonName": "Parina grande",
+    "scientificName": "Phoenicoparrus andinus"
+  },
+  {
+    "id": "phoenicoparrus-jamesi",
+    "commonName": "Parina chica",
+    "scientificName": "Phoenicoparrus jamesi"
+  },
+  {
+    "id": "rollandia-rolland",
+    "commonName": "Pimpollo común",
+    "scientificName": "Rollandia rolland"
+  },
+  {
+    "id": "podilymbus-podiceps",
+    "commonName": "Picurio",
+    "scientificName": "Podilymbus podiceps"
+  },
+  {
+    "id": "podiceps-major",
+    "commonName": "Huala",
+    "scientificName": "Podiceps major"
+  },
+  {
+    "id": "podiceps-occipitalis",
+    "commonName": "Blanquillo",
+    "scientificName": "Podiceps occipitalis"
+  },
+  {
+    "id": "podiceps-gallardoi",
+    "commonName": "Pimpollo tobiano",
+    "scientificName": "Podiceps gallardoi"
+  },
+  {
+    "id": "columba-livia",
+    "commonName": "Paloma doméstica",
+    "scientificName": "Columba livia"
+  },
+  {
+    "id": "patagioenas-picazuro",
+    "commonName": "Paloma picazuró",
+    "scientificName": "Patagioenas picazuro"
+  },
+  {
+    "id": "patagioenas-maculosa",
+    "commonName": "Paloma manchada",
+    "scientificName": "Patagioenas maculosa"
+  },
+  {
+    "id": "patagioenas-araucana",
+    "commonName": "Torcaza",
+    "scientificName": "Patagioenas araucana"
+  },
+  {
+    "id": "zenaida-meloda",
+    "commonName": "Paloma de alas blancas",
+    "scientificName": "Zenaida meloda"
+  },
+  {
+    "id": "zenaida-auriculata",
+    "commonName": "Tórtola",
+    "scientificName": "Zenaida auriculata"
+  },
+  {
+    "id": "metriopelia-ceciliae",
+    "commonName": "Tortolita boliviana",
+    "scientificName": "Metriopelia ceciliae"
+  },
+  {
+    "id": "metriopelia-melanoptera",
+    "commonName": "Tórtola cordillerana",
+    "scientificName": "Metriopelia melanoptera"
+  },
+  {
+    "id": "metriopelia-aymara",
+    "commonName": "Tortolita de la puna",
+    "scientificName": "Metriopelia aymara"
+  },
+  {
+    "id": "columbina-talpacoti",
+    "commonName": "Tortolita rojiza",
+    "scientificName": "Columbina talpacoti"
+  },
+  {
+    "id": "columbina-picui",
+    "commonName": "Tortolita cuyana",
+    "scientificName": "Columbina picui"
+  },
+  {
+    "id": "columbina-cruziana",
+    "commonName": "Tortolita quiguagua",
+    "scientificName": "Columbina cruziana"
+  },
+  {
+    "id": "guira-guira",
+    "commonName": "Pirincho",
+    "scientificName": "Guira guira"
+  },
+  {
+    "id": "crotophaga-ani",
+    "commonName": "Matacaballos de pico liso",
+    "scientificName": "Crotophaga ani"
+  },
+  {
+    "id": "crotophaga-sulcirostris",
+    "commonName": "Matacaballos",
+    "scientificName": "Crotophaga sulcirostris"
+  },
+  {
+    "id": "coccyzus-melacoryphus",
+    "commonName": "Cuclillo de pico negro",
+    "scientificName": "Coccyzus melacoryphus"
+  },
+  {
+    "id": "coccyzus-americanus",
+    "commonName": "Cuclillo de pico amarillo",
+    "scientificName": "Coccyzus americanus"
+  },
+  {
+    "id": "steatornis-caripensis",
+    "commonName": "Guácharo",
+    "scientificName": "Steatornis caripensis"
+  },
+  {
+    "id": "nyctibius-griseus",
+    "commonName": "Urutaú",
+    "scientificName": "Nyctibius griseus"
+  },
+  {
+    "id": "chordeiles-nacunda",
+    "commonName": "Ñacundá",
+    "scientificName": "Chordeiles nacunda"
+  },
+  {
+    "id": "chordeiles-acutipennis",
+    "commonName": "Gallina ciega peruana",
+    "scientificName": "Chordeiles acutipennis"
+  },
+  {
+    "id": "chordeiles-minor",
+    "commonName": "Gallina ciega boreal",
+    "scientificName": "Chordeiles minor"
+  },
+  {
+    "id": "systellura-longirostris",
+    "commonName": "Gallina ciega común",
+    "scientificName": "Systellura longirostris"
+  },
+  {
+    "id": "systellura-decussata",
+    "commonName": "Gallina ciega chica",
+    "scientificName": "Systellura decussata"
+  },
+  {
+    "id": "streptoprocne-zonaris",
+    "commonName": "Vencejo de collar",
+    "scientificName": "Streptoprocne zonaris"
+  },
+  {
+    "id": "chaetura-pelagica",
+    "commonName": "Vencejo de chimenea",
+    "scientificName": "Chaetura pelagica"
+  },
+  {
+    "id": "aeronautes-andecolus",
+    "commonName": "Vencejo chico",
+    "scientificName": "Aeronautes andecolus"
+  },
+  {
+    "id": "colibri-coruscans",
+    "commonName": "Picaflor azul",
+    "scientificName": "Colibri coruscans"
+  },
+  {
+    "id": "sephanoides-sephaniodes",
+    "commonName": "Picaflor chico",
+    "scientificName": "Sephanoides sephaniodes"
+  },
+  {
+    "id": "sephanoides-fernandensis",
+    "commonName": "Picaflor de Juan Fernández",
+    "scientificName": "Sephanoides fernandensis"
+  },
+  {
+    "id": "oreotrochilus-estella",
+    "commonName": "Picaflor de la puna",
+    "scientificName": "Oreotrochilus estella"
+  },
+  {
+    "id": "oreotrochilus-leucopleurus",
+    "commonName": "Picaflor cordillerano",
+    "scientificName": "Oreotrochilus leucopleurus"
+  },
+  {
+    "id": "patagona-gigas",
+    "commonName": "Picaflor gigante",
+    "scientificName": "Patagona gigas"
+  },
+  {
+    "id": "eulidia-yarrellii",
+    "commonName": "Picaflor de Arica",
+    "scientificName": "Eulidia yarrellii"
+  },
+  {
+    "id": "rhodopis-vesper",
+    "commonName": "Picaflor del norte",
+    "scientificName": "Rhodopis vesper"
+  },
+  {
+    "id": "thaumastura-cora",
+    "commonName": "Picaflor de Cora",
+    "scientificName": "Thaumastura cora"
+  },
+  {
+    "id": "chlorostilbon-lucidus",
+    "commonName": "Picaflor de pico rojo",
+    "scientificName": "Chlorostilbon lucidus"
+  },
+  {
+    "id": "leucochloris-albicollis",
+    "commonName": "Picaflor de garganta blanca",
+    "scientificName": "Leucochloris albicollis"
+  },
+  {
+    "id": "aramus-guarauna",
+    "commonName": "Carau",
+    "scientificName": "Aramus guarauna"
+  },
+  {
+    "id": "rallus-antarcticus",
+    "commonName": "Pidén austral",
+    "scientificName": "Rallus antarcticus"
+  },
+  {
+    "id": "porphyrio-martinica",
+    "commonName": "Tagüita purpúrea",
+    "scientificName": "Porphyrio martinica"
+  },
+  {
+    "id": "laterallus-jamaicensis",
+    "commonName": "Pidencito",
+    "scientificName": "Laterallus jamaicensis"
+  },
+  {
+    "id": "pardirallus-maculatus",
+    "commonName": "Pidén moteado",
+    "scientificName": "Pardirallus maculatus"
+  },
+  {
+    "id": "pardirallus-sanguinolentus",
+    "commonName": "Pidén común",
+    "scientificName": "Pardirallus sanguinolentus"
+  },
+  {
+    "id": "porphyriops-melanops",
+    "commonName": "Tagüita común",
+    "scientificName": "Porphyriops melanops"
+  },
+  {
+    "id": "porzana-spiloptera",
+    "commonName": "Burrito negruzco",
+    "scientificName": "Porzana spiloptera"
+  },
+  {
+    "id": "gallinula-galeata",
+    "commonName": "Tagüita del norte",
+    "scientificName": "Gallinula galeata"
+  },
+  {
+    "id": "fulica-rufifrons",
+    "commonName": "Tagua de frente roja",
+    "scientificName": "Fulica rufifrons"
+  },
+  {
+    "id": "fulica-cornuta",
+    "commonName": "Tagua cornuda",
+    "scientificName": "Fulica cornuta"
+  },
+  {
+    "id": "fulica-gigantea",
+    "commonName": "Tagua gigante",
+    "scientificName": "Fulica gigantea"
+  },
+  {
+    "id": "fulica-armillata",
+    "commonName": "Tagua común",
+    "scientificName": "Fulica armillata"
+  },
+  {
+    "id": "fulica-ardesiaca",
+    "commonName": "Tagua andina",
+    "scientificName": "Fulica ardesiaca"
+  },
+  {
+    "id": "fulica-leucoptera",
+    "commonName": "Tagua chica",
+    "scientificName": "Fulica leucoptera"
+  },
+  {
+    "id": "pluvialis-dominica",
+    "commonName": "Chorlo dorado",
+    "scientificName": "Pluvialis dominica"
+  },
+  {
+    "id": "pluvialis-fulva",
+    "commonName": "Chorlo dorado del Pacífico",
+    "scientificName": "Pluvialis fulva"
+  },
+  {
+    "id": "pluvialis-squatarola",
+    "commonName": "Chorlo ártico",
+    "scientificName": "Pluvialis squatarola"
+  },
+  {
+    "id": "oreopholus-ruficollis",
+    "commonName": "Chorlo de campo",
+    "scientificName": "Oreopholus ruficollis"
+  },
+  {
+    "id": "vanellus-chilensis",
+    "commonName": "Queltehue común",
+    "scientificName": "Vanellus chilensis"
+  },
+  {
+    "id": "vanellus-resplendens",
+    "commonName": "Queltehue de la puna",
+    "scientificName": "Vanellus resplendens"
+  },
+  {
+    "id": "charadrius-modestus",
+    "commonName": "Chorlo chileno",
+    "scientificName": "Charadrius modestus"
+  },
+  {
+    "id": "charadrius-vociferus",
+    "commonName": "Chorlo gritón",
+    "scientificName": "Charadrius vociferus"
+  },
+  {
+    "id": "charadrius-semipalmatus",
+    "commonName": "Chorlo semipalmado",
+    "scientificName": "Charadrius semipalmatus"
+  },
+  {
+    "id": "charadrius-wilsonia",
+    "commonName": "Chorlo de pico grueso",
+    "scientificName": "Charadrius wilsonia"
+  },
+  {
+    "id": "charadrius-collaris",
+    "commonName": "Chorlo de collar",
+    "scientificName": "Charadrius collaris"
+  },
+  {
+    "id": "charadrius-alticola",
+    "commonName": "Chorlo de la puna",
+    "scientificName": "Charadrius alticola"
+  },
+  {
+    "id": "charadrius-falklandicus",
+    "commonName": "Chorlo de doble collar",
+    "scientificName": "Charadrius falklandicus"
+  },
+  {
+    "id": "charadrius-nivosus",
+    "commonName": "Chorlo nevado",
+    "scientificName": "Charadrius nivosus"
+  },
+  {
+    "id": "phegornis-mitchellii",
+    "commonName": "Chorlito cordillerano",
+    "scientificName": "Phegornis mitchellii"
+  },
+  {
+    "id": "haematopus-palliatus",
+    "commonName": "Plipilén común",
+    "scientificName": "Haematopus palliatus"
+  },
+  {
+    "id": "haematopus-ater",
+    "commonName": "Pilpilén negro",
+    "scientificName": "Haematopus ater"
+  },
+  {
+    "id": "haematopus-leucopodus",
+    "commonName": "Pilpilén austral",
+    "scientificName": "Haematopus leucopodus"
+  },
+  {
+    "id": "himantopus-mexicanus",
+    "commonName": "Perrito",
+    "scientificName": "Himantopus mexicanus"
+  },
+  {
+    "id": "recurvirostra-andina",
+    "commonName": "Caití",
+    "scientificName": "Recurvirostra andina"
+  },
+  {
+    "id": "burhinus-superciliaris",
+    "commonName": "Chorlo cabezón",
+    "scientificName": "Burhinus superciliaris"
+  },
+  {
+    "id": "chionis-albus",
+    "commonName": "Paloma antártica",
+    "scientificName": "Chionis albus"
+  },
+  {
+    "id": "pluvianellus-socialis",
+    "commonName": "Chorlo de Magallanes",
+    "scientificName": "Pluvianellus socialis"
+  },
+  {
+    "id": "bartramia-longicauda",
+    "commonName": "Batitú",
+    "scientificName": "Bartramia longicauda"
+  },
+  {
+    "id": "numenius-phaeopus",
+    "commonName": "Zarapito común",
+    "scientificName": "Numenius phaeopus"
+  },
+  {
+    "id": "limosa-lapponica",
+    "commonName": "Zarapito de cola barrada",
+    "scientificName": "Limosa lapponica"
+  },
+  {
+    "id": "limosa-haemastica",
+    "commonName": "Zarapito de pico recto",
+    "scientificName": "Limosa haemastica"
+  },
+  {
+    "id": "limosa-fedoa",
+    "commonName": "Zarapito moteado",
+    "scientificName": "Limosa fedoa"
+  },
+  {
+    "id": "arenaria-interpres",
+    "commonName": "Playero vuelvepiedras",
+    "scientificName": "Arenaria interpres"
+  },
+  {
+    "id": "calidris-canutus",
+    "commonName": "Playero ártico",
+    "scientificName": "Calidris canutus"
+  },
+  {
+    "id": "calidris-virgata",
+    "commonName": "Playero de las rompientes",
+    "scientificName": "Calidris virgata"
+  },
+  {
+    "id": "calidris-acuminata",
+    "commonName": "Playero acuminado",
+    "scientificName": "Calidris acuminata"
+  },
+  {
+    "id": "calidris-himantopus",
+    "commonName": "Playero de patas largas",
+    "scientificName": "Calidris himantopus"
+  },
+  {
+    "id": "calidris-ferruginea",
+    "commonName": "Playero zarapito",
+    "scientificName": "Calidris ferruginea"
+  },
+  {
+    "id": "calidris-alba",
+    "commonName": "Playero blanco",
+    "scientificName": "Calidris alba"
+  },
+  {
+    "id": "calidris-bairdii",
+    "commonName": "Playero de Baird",
+    "scientificName": "Calidris bairdii"
+  },
+  {
+    "id": "calidris-minutilla",
+    "commonName": "Playero enano",
+    "scientificName": "Calidris minutilla"
+  },
+  {
+    "id": "calidris-fuscicollis",
+    "commonName": "Playero de lomo blanco",
+    "scientificName": "Calidris fuscicollis"
+  },
+  {
+    "id": "calidris-subruficollis",
+    "commonName": "Playero canela",
+    "scientificName": "Calidris subruficollis"
+  },
+  {
+    "id": "calidris-melanotos",
+    "commonName": "Playero pectoral",
+    "scientificName": "Calidris melanotos"
+  },
+  {
+    "id": "calidris-pusilla",
+    "commonName": "Playero semipalmado",
+    "scientificName": "Calidris pusilla"
+  },
+  {
+    "id": "calidris-mauri",
+    "commonName": "Playero occidental",
+    "scientificName": "Calidris mauri"
+  },
+  {
+    "id": "limnodromus-griseus",
+    "commonName": "Becacina chica",
+    "scientificName": "Limnodromus griseus"
+  },
+  {
+    "id": "gallinago-stricklandii",
+    "commonName": "Becacina grande",
+    "scientificName": "Gallinago stricklandii"
+  },
+  {
+    "id": "gallinago-magellanica",
+    "commonName": "Becacina común",
+    "scientificName": "Gallinago magellanica"
+  },
+  {
+    "id": "gallinago-andina",
+    "commonName": "Becacina de la puna",
+    "scientificName": "Gallinago andina"
+  },
+  {
+    "id": "phalaropus-tricolor",
+    "commonName": "Pollito de mar tricolor",
+    "scientificName": "Phalaropus tricolor"
+  },
+  {
+    "id": "phalaropus-lobatus",
+    "commonName": "Pollito de mar boreal",
+    "scientificName": "Phalaropus lobatus"
+  },
+  {
+    "id": "phalaropus-fulicarius",
+    "commonName": "Pollito de mar rojizo",
+    "scientificName": "Phalaropus fulicarius"
+  },
+  {
+    "id": "actitis-macularius",
+    "commonName": "Playero manchado",
+    "scientificName": "Actitis macularius"
+  },
+  {
+    "id": "tringa-solitaria",
+    "commonName": "Pitotoy solitario",
+    "scientificName": "Tringa solitaria"
+  },
+  {
+    "id": "tringa-incana",
+    "commonName": "Playero gris",
+    "scientificName": "Tringa incana"
+  },
+  {
+    "id": "tringa-melanoleuca",
+    "commonName": "Pitotoy grande",
+    "scientificName": "Tringa melanoleuca"
+  },
+  {
+    "id": "tringa-semipalmata",
+    "commonName": "Playero grande",
+    "scientificName": "Tringa semipalmata"
+  },
+  {
+    "id": "tringa-flavipes",
+    "commonName": "Pitotoy chico",
+    "scientificName": "Tringa flavipes"
+  },
+  {
+    "id": "attagis-gayi",
+    "commonName": "Perdicita cordillerana",
+    "scientificName": "Attagis gayi"
+  },
+  {
+    "id": "attagis-malouinus",
+    "commonName": "Perdicita austral",
+    "scientificName": "Attagis malouinus"
+  },
+  {
+    "id": "thinocorus-orbignyianus",
+    "commonName": "Perdicita cojón",
+    "scientificName": "Thinocorus orbignyianus"
+  },
+  {
+    "id": "thinocorus-rumicivorus",
+    "commonName": "Perdicita chica",
+    "scientificName": "Thinocorus rumicivorus"
+  },
+  {
+    "id": "jacana-jacana",
+    "commonName": "Jacana",
+    "scientificName": "Jacana jacana"
+  },
+  {
+    "id": "nycticryphes-semicollaris",
+    "commonName": "Becacina pintada",
+    "scientificName": "Nycticryphes semicollaris"
+  },
+  {
+    "id": "stercorarius-chilensis",
+    "commonName": "Salteador chileno",
+    "scientificName": "Stercorarius chilensis"
+  },
+  {
+    "id": "stercorarius-maccormicki",
+    "commonName": "Salteador polar",
+    "scientificName": "Stercorarius maccormicki"
+  },
+  {
+    "id": "stercorarius-antarcticus",
+    "commonName": "Salteador pardo",
+    "scientificName": "Stercorarius antarcticus"
+  },
+  {
+    "id": "stercorarius-pomarinus",
+    "commonName": "Salteador pomarino",
+    "scientificName": "Stercorarius pomarinus"
+  },
+  {
+    "id": "stercorarius-parasiticus",
+    "commonName": "Salteador chico",
+    "scientificName": "Stercorarius parasiticus"
+  },
+  {
+    "id": "stercorarius-longicaudus",
+    "commonName": "Salteador de cola larga",
+    "scientificName": "Stercorarius longicaudus"
+  },
+  {
+    "id": "rynchops-niger",
+    "commonName": "Rayador",
+    "scientificName": "Rynchops niger"
+  },
+  {
+    "id": "creagrus-furcatus",
+    "commonName": "Gaviota de las Galápagos",
+    "scientificName": "Creagrus furcatus"
+  },
+  {
+    "id": "xema-sabini",
+    "commonName": "Gaviota de Sabine",
+    "scientificName": "Xema sabini"
+  },
+  {
+    "id": "chroicocephalus-philadelphia",
+    "commonName": "Gaviota de Bonaparte",
+    "scientificName": "Chroicocephalus philadelphia"
+  },
+  {
+    "id": "chroicocephalus-serranus",
+    "commonName": "Gaviota andina",
+    "scientificName": "Chroicocephalus serranus"
+  },
+  {
+    "id": "chroicocephalus-maculipennis",
+    "commonName": "Gaviota cáhuil",
+    "scientificName": "Chroicocephalus maculipennis"
+  },
+  {
+    "id": "chroicocephalus-cirrocephalus",
+    "commonName": "Gaviota de capucho gris",
+    "scientificName": "Chroicocephalus cirrocephalus"
+  },
+  {
+    "id": "leucophaeus-scoresbii",
+    "commonName": "Gaviota austral",
+    "scientificName": "Leucophaeus scoresbii"
+  },
+  {
+    "id": "leucophaeus-modestus",
+    "commonName": "Gaviota garuma",
+    "scientificName": "Leucophaeus modestus"
+  },
+  {
+    "id": "leucophaeus-atricilla",
+    "commonName": "Gaviota reidora",
+    "scientificName": "Leucophaeus atricilla"
+  },
+  {
+    "id": "leucophaeus-pipixcan",
+    "commonName": "Gaviota de Franklin",
+    "scientificName": "Leucophaeus pipixcan"
+  },
+  {
+    "id": "larus-belcheri",
+    "commonName": "Gaviota peruana",
+    "scientificName": "Larus belcheri"
+  },
+  {
+    "id": "larus-dominicanus",
+    "commonName": "Gaviota dominicana",
+    "scientificName": "Larus dominicanus"
+  },
+  {
+    "id": "larus-argentatus",
+    "commonName": "Gaviota argéntea",
+    "scientificName": "Larus argentatus"
+  },
+  {
+    "id": "anous-stolidus",
+    "commonName": "Gaviotín de San Félix",
+    "scientificName": "Anous stolidus"
+  },
+  {
+    "id": "anous-minutus",
+    "commonName": "Gaviotín de corona blanca",
+    "scientificName": "Anous minutus"
+  },
+  {
+    "id": "anous-albivitta",
+    "commonName": "Gaviotín de San Ambrosio",
+    "scientificName": "Anous albivitta"
+  },
+  {
+    "id": "gygis-alba",
+    "commonName": "Gaviotín blanco",
+    "scientificName": "Gygis alba"
+  },
+  {
+    "id": "onychoprion-fuscatus",
+    "commonName": "Gaviotín apizarrado",
+    "scientificName": "Onychoprion fuscatus"
+  },
+  {
+    "id": "onychoprion-lunatus",
+    "commonName": "Gaviotín pascuense",
+    "scientificName": "Onychoprion lunatus"
+  },
+  {
+    "id": "onychoprion-anaethetus",
+    "commonName": "Gaviotin de bridas",
+    "scientificName": "Onychoprion anaethetus"
+  },
+  {
+    "id": "sternula-antillarum",
+    "commonName": "Gaviotín chico boreal",
+    "scientificName": "Sternula antillarum"
+  },
+  {
+    "id": "sternula-lorata",
+    "commonName": "Gaviotín chico",
+    "scientificName": "Sternula lorata"
+  },
+  {
+    "id": "gelochelidon-nilotica",
+    "commonName": "Gaviotín de pico negro",
+    "scientificName": "Gelochelidon nilotica"
+  },
+  {
+    "id": "larosterna-inca",
+    "commonName": "Gaviotín monja",
+    "scientificName": "Larosterna inca"
+  },
+  {
+    "id": "chlidonias-niger",
+    "commonName": "Gaviotín negro",
+    "scientificName": "Chlidonias niger"
+  },
+  {
+    "id": "sterna-hirundo",
+    "commonName": "Gaviotín boreal",
+    "scientificName": "Sterna hirundo"
+  },
+  {
+    "id": "sterna-paradisaea",
+    "commonName": "Gaviotín ártico",
+    "scientificName": "Sterna paradisaea"
+  },
+  {
+    "id": "sterna-hirundinacea",
+    "commonName": "Gaviotín sudamericano",
+    "scientificName": "Sterna hirundinacea"
+  },
+  {
+    "id": "sterna-vittata",
+    "commonName": "Gaviotín antártico",
+    "scientificName": "Sterna vittata"
+  },
+  {
+    "id": "sterna-trudeaui",
+    "commonName": "Gaviotín piquerito",
+    "scientificName": "Sterna trudeaui"
+  },
+  {
+    "id": "thalasseus-elegans",
+    "commonName": "Gaviotín elegante",
+    "scientificName": "Thalasseus elegans"
+  },
+  {
+    "id": "thalasseus-sandvicensis",
+    "commonName": "Gaviotín de Sandwich",
+    "scientificName": "Thalasseus sandvicensis"
+  },
+  {
+    "id": "thalasseus-maximus",
+    "commonName": "Gaviotín real",
+    "scientificName": "Thalasseus maximus"
+  },
+  {
+    "id": "phaethon-aethereus",
+    "commonName": "Ave del trópico de pico rojo",
+    "scientificName": "Phaethon aethereus"
+  },
+  {
+    "id": "phaethon-rubricauda",
+    "commonName": "Ave del trópico de cola roja",
+    "scientificName": "Phaethon rubricauda"
+  },
+  {
+    "id": "phaethon-lepturus",
+    "commonName": "Ave del trópico de cola blanca",
+    "scientificName": "Phaethon lepturus"
+  },
+  {
+    "id": "aptenodytes-patagonicus",
+    "commonName": "Pingüino rey",
+    "scientificName": "Aptenodytes patagonicus"
+  },
+  {
+    "id": "aptenodytes-forsteri",
+    "commonName": "Pingüino emperador",
+    "scientificName": "Aptenodytes forsteri"
+  },
+  {
+    "id": "pygoscelis-adeliae",
+    "commonName": "Pingüino de Adelia",
+    "scientificName": "Pygoscelis adeliae"
+  },
+  {
+    "id": "pygoscelis-papua",
+    "commonName": "Pingüino papúa",
+    "scientificName": "Pygoscelis papua"
+  },
+  {
+    "id": "pygoscelis-antarcticus",
+    "commonName": "Pingüino antártico",
+    "scientificName": "Pygoscelis antarcticus"
+  },
+  {
+    "id": "eudyptula-minor",
+    "commonName": "Pingüino azul",
+    "scientificName": "Eudyptula minor"
+  },
+  {
+    "id": "spheniscus-humboldti",
+    "commonName": "Pingüino de Humboldt",
+    "scientificName": "Spheniscus humboldti"
+  },
+  {
+    "id": "spheniscus-magellanicus",
+    "commonName": "Pingüino de Magallanes",
+    "scientificName": "Spheniscus magellanicus"
+  },
+  {
+    "id": "eudyptes-chrysolophus",
+    "commonName": "Pingüino macaroni",
+    "scientificName": "Eudyptes chrysolophus"
+  },
+  {
+    "id": "eudyptes-chrysocome",
+    "commonName": "Pingüino de penacho amarillo",
+    "scientificName": "Eudyptes chrysocome"
+  },
+  {
+    "id": "phoebastria-irrorata",
+    "commonName": "Albatros de las Galápagos",
+    "scientificName": "Phoebastria irrorata"
+  },
+  {
+    "id": "diomedea-epomophora",
+    "commonName": "Albatros real",
+    "scientificName": "Diomedea epomophora"
+  },
+  {
+    "id": "diomedea-exulans",
+    "commonName": "Albatros errante",
+    "scientificName": "Diomedea exulans"
+  },
+  {
+    "id": "phoebetria-fusca",
+    "commonName": "Albatros oscuro",
+    "scientificName": "Phoebetria fusca"
+  },
+  {
+    "id": "phoebetria-palpebrata",
+    "commonName": "Albatros de manto claro",
+    "scientificName": "Phoebetria palpebrata"
+  },
+  {
+    "id": "thalassarche-melanophris",
+    "commonName": "Albatros de ceja negra",
+    "scientificName": "Thalassarche melanophris"
+  },
+  {
+    "id": "thalassarche-chrysostoma",
+    "commonName": "Albatros de cabeza gris",
+    "scientificName": "Thalassarche chrysostoma"
+  },
+  {
+    "id": "thalassarche-bulleri",
+    "commonName": "Albatros de Buller",
+    "scientificName": "Thalassarche bulleri"
+  },
+  {
+    "id": "thalassarche-cauta",
+    "commonName": "Albatros de frente blanca",
+    "scientificName": "Thalassarche cauta"
+  },
+  {
+    "id": "thalassarche-salvini",
+    "commonName": "Albatros de Salvin",
+    "scientificName": "Thalassarche salvini"
+  },
+  {
+    "id": "thalassarche-eremita",
+    "commonName": "Albatros de Chatham",
+    "scientificName": "Thalassarche eremita"
+  },
+  {
+    "id": "fregetta-grallaria",
+    "commonName": "Golondrina de mar de vientre blanco",
+    "scientificName": "Fregetta grallaria"
+  },
+  {
+    "id": "fregetta-tropica",
+    "commonName": "Golondrina de mar de vientre negro",
+    "scientificName": "Fregetta tropica"
+  },
+  {
+    "id": "nesofregetta-fuliginosa",
+    "commonName": "Golondrina de mar polinésica",
+    "scientificName": "Nesofregetta fuliginosa"
+  },
+  {
+    "id": "oceanites-oceanicus",
+    "commonName": "Golondrina de mar de Wilson",
+    "scientificName": "Oceanites oceanicus"
+  },
+  {
+    "id": "oceanites-pincoyae",
+    "commonName": "Golondrina de mar Pincoya",
+    "scientificName": "Oceanites pincoyae"
+  },
+  {
+    "id": "oceanites-gracilis",
+    "commonName": "Golondrina de mar chica",
+    "scientificName": "Oceanites gracilis"
+  },
+  {
+    "id": "garrodia-nereis",
+    "commonName": "Golondrina de mar subantártica",
+    "scientificName": "Garrodia nereis"
+  },
+  {
+    "id": "pelagodroma-marina",
+    "commonName": "Golondrina de mar de cara blanca",
+    "scientificName": "Pelagodroma marina"
+  },
+  {
+    "id": "hydrobates-tethys",
+    "commonName": "Golondrina de mar peruana",
+    "scientificName": "Hydrobates tethys"
+  },
+  {
+    "id": "hydrobates-markhami",
+    "commonName": "Golondrina de mar negra",
+    "scientificName": "Hydrobates markhami"
+  },
+  {
+    "id": "hydrobates-hornbyi",
+    "commonName": "Golondrina de mar de collar",
+    "scientificName": "Hydrobates hornbyi"
+  },
+  {
+    "id": "macronectes-giganteus",
+    "commonName": "Petrel gigante antártico",
+    "scientificName": "Macronectes giganteus"
+  },
+  {
+    "id": "macronectes-halli",
+    "commonName": "Petrel gigante subantártico",
+    "scientificName": "Macronectes halli"
+  },
+  {
+    "id": "fulmarus-glacialis",
+    "commonName": "Petrel boreal",
+    "scientificName": "Fulmarus glacialis"
+  },
+  {
+    "id": "fulmarus-glacialoides",
+    "commonName": "Petrel plateado",
+    "scientificName": "Fulmarus glacialoides"
+  },
+  {
+    "id": "thalassoica-antarctica",
+    "commonName": "Petrel antártico",
+    "scientificName": "Thalassoica antarctica"
+  },
+  {
+    "id": "daption-capense",
+    "commonName": "Petrel damero",
+    "scientificName": "Daption capense"
+  },
+  {
+    "id": "pagodroma-nivea",
+    "commonName": "Petrel de las nieves",
+    "scientificName": "Pagodroma nivea"
+  },
+  {
+    "id": "aphrodroma-brevirostris",
+    "commonName": "Petrel de Kerguelen",
+    "scientificName": "Aphrodroma brevirostris"
+  },
+  {
+    "id": "pterodroma-leucoptera",
+    "commonName": "Petrel de Gould",
+    "scientificName": "Pterodroma leucoptera"
+  },
+  {
+    "id": "pterodroma-macroptera",
+    "commonName": "Petrel de alas grandes",
+    "scientificName": "Pterodroma macroptera"
+  },
+  {
+    "id": "pterodroma-atrata",
+    "commonName": "Petrel de Henderson",
+    "scientificName": "Pterodroma atrata"
+  },
+  {
+    "id": "pterodroma-mollis",
+    "commonName": "Petrel de collar gris",
+    "scientificName": "Pterodroma mollis"
+  },
+  {
+    "id": "pterodroma-cervicalis",
+    "commonName": "Petrel de cuello blanco",
+    "scientificName": "Pterodroma cervicalis"
+  },
+  {
+    "id": "pterodroma-lessonii",
+    "commonName": "Petrel de frente blanca",
+    "scientificName": "Pterodroma lessonii"
+  },
+  {
+    "id": "pterodroma-cookii",
+    "commonName": "Petrel de Cook",
+    "scientificName": "Pterodroma cookii"
+  },
+  {
+    "id": "pterodroma-nigripennis",
+    "commonName": "Petrel de alas negras",
+    "scientificName": "Pterodroma nigripennis"
+  },
+  {
+    "id": "pterodroma-defilippiana",
+    "commonName": "Petrel de Masatierra",
+    "scientificName": "Pterodroma defilippiana"
+  },
+  {
+    "id": "pterodroma-longirostris",
+    "commonName": "Petrel de Masafuera",
+    "scientificName": "Pterodroma longirostris"
+  },
+  {
+    "id": "pterodroma-heraldica",
+    "commonName": "Petrel de Herald",
+    "scientificName": "Pterodroma heraldica"
+  },
+  {
+    "id": "pterodroma-ultima",
+    "commonName": "Petrel de Murphy",
+    "scientificName": "Pterodroma ultima"
+  },
+  {
+    "id": "pterodroma-neglecta",
+    "commonName": "Petrel de Kermadec",
+    "scientificName": "Pterodroma neglecta"
+  },
+  {
+    "id": "pterodroma-externa",
+    "commonName": "Petrel de Juan Fernández",
+    "scientificName": "Pterodroma externa"
+  },
+  {
+    "id": "pterodroma-alba",
+    "commonName": "Petrel de Fénix",
+    "scientificName": "Pterodroma alba"
+  },
+  {
+    "id": "halobaena-caerulea",
+    "commonName": "Petrel azulado",
+    "scientificName": "Halobaena caerulea"
+  },
+  {
+    "id": "pachyptila-vittata",
+    "commonName": "Petrel-paloma de pico ancho",
+    "scientificName": "Pachyptila vittata"
+  },
+  {
+    "id": "pachyptila-desolata",
+    "commonName": "Petrel-paloma antártico",
+    "scientificName": "Pachyptila desolata"
+  },
+  {
+    "id": "pachyptila-belcheri",
+    "commonName": "Petrel-paloma de pico delgado",
+    "scientificName": "Pachyptila belcheri"
+  },
+  {
+    "id": "procellaria-cinerea",
+    "commonName": "Petrel gris",
+    "scientificName": "Procellaria cinerea"
+  },
+  {
+    "id": "procellaria-aequinoctialis",
+    "commonName": "Petrel de barba blanca",
+    "scientificName": "Procellaria aequinoctialis"
+  },
+  {
+    "id": "procellaria-parkinsoni",
+    "commonName": "Petrel de Parkinson",
+    "scientificName": "Procellaria parkinsoni"
+  },
+  {
+    "id": "procellaria-westlandica",
+    "commonName": "Petrel de Westland",
+    "scientificName": "Procellaria westlandica"
+  },
+  {
+    "id": "ardenna-pacifica",
+    "commonName": "Fardela del Pacífico",
+    "scientificName": "Ardenna pacifica"
+  },
+  {
+    "id": "ardenna-bulleri",
+    "commonName": "Fardela de dorso gris",
+    "scientificName": "Ardenna bulleri"
+  },
+  {
+    "id": "ardenna-grisea",
+    "commonName": "Fardela negra",
+    "scientificName": "Ardenna grisea"
+  },
+  {
+    "id": "ardenna-gravis",
+    "commonName": "Fardela capirotada",
+    "scientificName": "Ardenna gravis"
+  },
+  {
+    "id": "ardenna-creatopus",
+    "commonName": "Fardela blanca",
+    "scientificName": "Ardenna creatopus"
+  },
+  {
+    "id": "ardenna-carneipes",
+    "commonName": "Fardela de patas pálidas",
+    "scientificName": "Ardenna carneipes"
+  },
+  {
+    "id": "puffinus-nativitatis",
+    "commonName": "Fardela de Pascua",
+    "scientificName": "Puffinus nativitatis"
+  },
+  {
+    "id": "puffinus-puffinus",
+    "commonName": "Fardela atlántica",
+    "scientificName": "Puffinus puffinus"
+  },
+  {
+    "id": "puffinus-assimilis",
+    "commonName": "Fardela chica",
+    "scientificName": "Puffinus assimilis"
+  },
+  {
+    "id": "puffinus-bailloni",
+    "commonName": "Fardela tropical",
+    "scientificName": "Puffinus bailloni"
+  },
+  {
+    "id": "pelecanoides-garnotii",
+    "commonName": "Yunco de Humboldt",
+    "scientificName": "Pelecanoides garnotii"
+  },
+  {
+    "id": "pelecanoides-urinatrix",
+    "commonName": "Yunco de los canales",
+    "scientificName": "Pelecanoides urinatrix"
+  },
+  {
+    "id": "pelecanoides-magellani",
+    "commonName": "Yunco de Magallanes",
+    "scientificName": "Pelecanoides magellani"
+  },
+  {
+    "id": "ciconia-maguari",
+    "commonName": "Pillo",
+    "scientificName": "Ciconia maguari"
+  },
+  {
+    "id": "mycteria-americana",
+    "commonName": "Cigüeña de cabeza pelada",
+    "scientificName": "Mycteria americana"
+  },
+  {
+    "id": "jabiru-mycteria",
+    "commonName": "Jabirú",
+    "scientificName": "Jabiru mycteria"
+  },
+  {
+    "id": "fregata-magnificens",
+    "commonName": "Ave fragata magnífica",
+    "scientificName": "Fregata magnificens"
+  },
+  {
+    "id": "fregata-minor",
+    "commonName": "Ave fragata grande",
+    "scientificName": "Fregata minor"
+  },
+  {
+    "id": "sula-nebouxii",
+    "commonName": "Piquero de patas azules",
+    "scientificName": "Sula nebouxii"
+  },
+  {
+    "id": "sula-variegata",
+    "commonName": "Piquero de Humboldt",
+    "scientificName": "Sula variegata"
+  },
+  {
+    "id": "sula-dactylatra",
+    "commonName": "Piquero blanco",
+    "scientificName": "Sula dactylatra"
+  },
+  {
+    "id": "sula-granti",
+    "commonName": "Piquero de Nazca",
+    "scientificName": "Sula granti"
+  },
+  {
+    "id": "sula-sula",
+    "commonName": "Piquero de patas rojas",
+    "scientificName": "Sula sula"
+  },
+  {
+    "id": "sula-leucogaster",
+    "commonName": "Piquero café",
+    "scientificName": "Sula leucogaster"
+  },
+  {
+    "id": "phalacrocorax-gaimardi",
+    "commonName": "Lile",
+    "scientificName": "Phalacrocorax gaimardi"
+  },
+  {
+    "id": "phalacrocorax-brasilianus",
+    "commonName": "Yeco",
+    "scientificName": "Phalacrocorax brasilianus"
+  },
+  {
+    "id": "phalacrocorax-magellanicus",
+    "commonName": "Cormorán de las rocas",
+    "scientificName": "Phalacrocorax magellanicus"
+  },
+  {
+    "id": "phalacrocorax-bougainvillii",
+    "commonName": "Guanay",
+    "scientificName": "Phalacrocorax bougainvillii"
+  },
+  {
+    "id": "phalacrocorax-atriceps",
+    "commonName": "Cormorán imperial",
+    "scientificName": "Phalacrocorax atriceps"
+  },
+  {
+    "id": "phalacrocorax-bransfieldensis",
+    "commonName": "Cormorán antártico",
+    "scientificName": "Phalacrocorax bransfieldensis"
+  },
+  {
+    "id": "pelecanus-occidentalis",
+    "commonName": "Pelícano pardo",
+    "scientificName": "Pelecanus occidentalis"
+  },
+  {
+    "id": "pelecanus-thagus",
+    "commonName": "Pelícano de Humboldt",
+    "scientificName": "Pelecanus thagus"
+  },
+  {
+    "id": "ixobrychus-exilis",
+    "commonName": "Huairavillo de dorso negro",
+    "scientificName": "Ixobrychus exilis"
+  },
+  {
+    "id": "ixobrychus-involucris",
+    "commonName": "Huairavillo",
+    "scientificName": "Ixobrychus involucris"
+  },
+  {
+    "id": "nycticorax-nycticorax",
+    "commonName": "Huairavo común",
+    "scientificName": "Nycticorax nycticorax"
+  },
+  {
+    "id": "nyctanassa-violacea",
+    "commonName": "Huairavo de corona amarilla",
+    "scientificName": "Nyctanassa violacea"
+  },
+  {
+    "id": "butorides-striata",
+    "commonName": "Garcita azulada",
+    "scientificName": "Butorides striata"
+  },
+  {
+    "id": "bubulcus-ibis",
+    "commonName": "Garza bueyera",
+    "scientificName": "Bubulcus ibis"
+  },
+  {
+    "id": "ardea-cocoi",
+    "commonName": "Garza cuca",
+    "scientificName": "Ardea cocoi"
+  },
+  {
+    "id": "ardea-alba",
+    "commonName": "Garza grande",
+    "scientificName": "Ardea alba"
+  },
+  {
+    "id": "syrigma-sibilatrix",
+    "commonName": "Garza chiflón",
+    "scientificName": "Syrigma sibilatrix"
+  },
+  {
+    "id": "egretta-tricolor",
+    "commonName": "Garza tricolor",
+    "scientificName": "Egretta tricolor"
+  },
+  {
+    "id": "egretta-thula",
+    "commonName": "Garza chica",
+    "scientificName": "Egretta thula"
+  },
+  {
+    "id": "egretta-caerulea",
+    "commonName": "Garza azul",
+    "scientificName": "Egretta caerulea"
+  },
+  {
+    "id": "plegadis-chihi",
+    "commonName": "Cuervo de pantano común",
+    "scientificName": "Plegadis chihi"
+  },
+  {
+    "id": "plegadis-ridgwayi",
+    "commonName": "Cuervo de pantano de la puna",
+    "scientificName": "Plegadis ridgwayi"
+  },
+  {
+    "id": "phimosus-infuscatus",
+    "commonName": "Cuervo de pantano de cara pelada",
+    "scientificName": "Phimosus infuscatus"
+  },
+  {
+    "id": "theristicus-branickii",
+    "commonName": "Bandurria de la puna",
+    "scientificName": "Theristicus branickii"
+  },
+  {
+    "id": "theristicus-melanopis",
+    "commonName": "Bandurria",
+    "scientificName": "Theristicus melanopis"
+  },
+  {
+    "id": "platalea-ajaja",
+    "commonName": "Espátula",
+    "scientificName": "Platalea ajaja"
+  },
+  {
+    "id": "vultur-gryphus",
+    "commonName": "Cóndor",
+    "scientificName": "Vultur gryphus"
+  },
+  {
+    "id": "coragyps-atratus",
+    "commonName": "Jote de cabeza negra",
+    "scientificName": "Coragyps atratus"
+  },
+  {
+    "id": "cathartes-aura",
+    "commonName": "Jote de cabeza colorada",
+    "scientificName": "Cathartes aura"
+  },
+  {
+    "id": "pandion-haliaetus",
+    "commonName": "Águila pescadora",
+    "scientificName": "Pandion haliaetus"
+  },
+  {
+    "id": "elanus-leucurus",
+    "commonName": "Bailarín",
+    "scientificName": "Elanus leucurus"
+  },
+  {
+    "id": "elanoides-forficatus",
+    "commonName": "Milano tijereta",
+    "scientificName": "Elanoides forficatus"
+  },
+  {
+    "id": "circus-cinereus",
+    "commonName": "Vari ceniciento",
+    "scientificName": "Circus cinereus"
+  },
+  {
+    "id": "circus-buffoni",
+    "commonName": "Vari huevetero",
+    "scientificName": "Circus buffoni"
+  },
+  {
+    "id": "accipiter-bicolor",
+    "commonName": "Peuquito",
+    "scientificName": "Accipiter bicolor"
+  },
+  {
+    "id": "buteogallus-urubitinga",
+    "commonName": "Águila negra",
+    "scientificName": "Buteogallus urubitinga"
+  },
+  {
+    "id": "rupornis-magnirostris",
+    "commonName": "Taguató",
+    "scientificName": "Rupornis magnirostris"
+  },
+  {
+    "id": "parabuteo-unicinctus",
+    "commonName": "Peuco",
+    "scientificName": "Parabuteo unicinctus"
+  },
+  {
+    "id": "geranoaetus-polyosoma",
+    "commonName": "Aguilucho común",
+    "scientificName": "Geranoaetus polyosoma"
+  },
+  {
+    "id": "geranoaetus-melanoleucus",
+    "commonName": "Águila",
+    "scientificName": "Geranoaetus melanoleucus"
+  },
+  {
+    "id": "buteo-albigula",
+    "commonName": "Aguilucho chico",
+    "scientificName": "Buteo albigula"
+  },
+  {
+    "id": "buteo-swainsoni",
+    "commonName": "Aguilucho langostero",
+    "scientificName": "Buteo swainsoni"
+  },
+  {
+    "id": "buteo-ventralis",
+    "commonName": "Aguilucho de cola rojiza",
+    "scientificName": "Buteo ventralis"
+  },
+  {
+    "id": "tyto-alba",
+    "commonName": "Lechuza",
+    "scientificName": "Tyto alba"
+  },
+  {
+    "id": "bubo-virginianus",
+    "commonName": "Tucúquere",
+    "scientificName": "Bubo virginianus"
+  },
+  {
+    "id": "strix-rufipes",
+    "commonName": "Concón",
+    "scientificName": "Strix rufipes"
+  },
+  {
+    "id": "glaucidium-peruanum",
+    "commonName": "Chuncho del norte",
+    "scientificName": "Glaucidium peruanum"
+  },
+  {
+    "id": "glaucidium-nana",
+    "commonName": "Chuncho austral",
+    "scientificName": "Glaucidium nana"
+  },
+  {
+    "id": "athene-cunicularia",
+    "commonName": "Pequén",
+    "scientificName": "Athene cunicularia"
+  },
+  {
+    "id": "asio-flammeus",
+    "commonName": "Nuco",
+    "scientificName": "Asio flammeus"
+  },
+  {
+    "id": "megaceryle-torquata",
+    "commonName": "Martín pescador",
+    "scientificName": "Megaceryle torquata"
+  },
+  {
+    "id": "chloroceryle-americana",
+    "commonName": "Martín pescador chico",
+    "scientificName": "Chloroceryle americana"
+  },
+  {
+    "id": "dryobates-lignarius",
+    "commonName": "Carpinterito",
+    "scientificName": "Dryobates lignarius"
+  },
+  {
+    "id": "campephilus-magellanicus",
+    "commonName": "Carpintero negro",
+    "scientificName": "Campephilus magellanicus"
+  },
+  {
+    "id": "colaptes-pitius",
+    "commonName": "Pitío austral",
+    "scientificName": "Colaptes pitius"
+  },
+  {
+    "id": "colaptes-rupicola",
+    "commonName": "Pitío del norte",
+    "scientificName": "Colaptes rupicola"
+  },
+  {
+    "id": "caracara-plancus",
+    "commonName": "Traro",
+    "scientificName": "Caracara plancus"
+  },
+  {
+    "id": "phalcoboenus-megalopterus",
+    "commonName": "Carancho cordillerano",
+    "scientificName": "Phalcoboenus megalopterus"
+  },
+  {
+    "id": "phalcoboenus-albogularis",
+    "commonName": "Carancho de garganta blanca",
+    "scientificName": "Phalcoboenus albogularis"
+  },
+  {
+    "id": "phalcoboenus-australis",
+    "commonName": "Carancho negro",
+    "scientificName": "Phalcoboenus australis"
+  },
+  {
+    "id": "milvago-chimango",
+    "commonName": "Tiuque",
+    "scientificName": "Milvago chimango"
+  },
+  {
+    "id": "falco-sparverius",
+    "commonName": "Cernícalo",
+    "scientificName": "Falco sparverius"
+  },
+  {
+    "id": "falco-deiroleucus",
+    "commonName": "Halcón de pecho naranja",
+    "scientificName": "Falco deiroleucus"
+  },
+  {
+    "id": "falco-femoralis",
+    "commonName": "Halcón perdiguero",
+    "scientificName": "Falco femoralis"
+  },
+  {
+    "id": "falco-peregrinus",
+    "commonName": "Halcón peregrino",
+    "scientificName": "Falco peregrinus"
+  },
+  {
+    "id": "psilopsiagon-aurifrons",
+    "commonName": "Perico cordillerano",
+    "scientificName": "Psilopsiagon aurifrons"
+  },
+  {
+    "id": "myiopsitta-monachus",
+    "commonName": "Cotorra",
+    "scientificName": "Myiopsitta monachus"
+  },
+  {
+    "id": "enicognathus-ferrugineus",
+    "commonName": "Cachaña",
+    "scientificName": "Enicognathus ferrugineus"
+  },
+  {
+    "id": "enicognathus-leptorhynchus",
+    "commonName": "Choroy",
+    "scientificName": "Enicognathus leptorhynchus"
+  },
+  {
+    "id": "cyanoliseus-patagonus",
+    "commonName": "Tricahue",
+    "scientificName": "Cyanoliseus patagonus"
+  },
+  {
+    "id": "pteroptochos-castaneus",
+    "commonName": "Hued-hued castaño",
+    "scientificName": "Pteroptochos castaneus"
+  },
+  {
+    "id": "pteroptochos-tarnii",
+    "commonName": "Hued-hued del sur",
+    "scientificName": "Pteroptochos tarnii"
+  },
+  {
+    "id": "pteroptochos-megapodius",
+    "commonName": "Turca",
+    "scientificName": "Pteroptochos megapodius"
+  },
+  {
+    "id": "scelorchilus-albicollis",
+    "commonName": "Tapaculo",
+    "scientificName": "Scelorchilus albicollis"
+  },
+  {
+    "id": "scelorchilus-rubecula",
+    "commonName": "Chucao",
+    "scientificName": "Scelorchilus rubecula"
+  },
+  {
+    "id": "eugralla-paradoxa",
+    "commonName": "Churrín de la Mocha",
+    "scientificName": "Eugralla paradoxa"
+  },
+  {
+    "id": "scytalopus-fuscus",
+    "commonName": "Churrín del norte",
+    "scientificName": "Scytalopus fuscus"
+  },
+  {
+    "id": "scytalopus-magellanicus",
+    "commonName": "Churrín del sur",
+    "scientificName": "Scytalopus magellanicus"
+  },
+  {
+    "id": "geositta-cunicularia",
+    "commonName": "Minero común",
+    "scientificName": "Geositta cunicularia"
+  },
+  {
+    "id": "geositta-punensis",
+    "commonName": "Minero de la puna",
+    "scientificName": "Geositta punensis"
+  },
+  {
+    "id": "geositta-rufipennis",
+    "commonName": "Minero cordillerano",
+    "scientificName": "Geositta rufipennis"
+  },
+  {
+    "id": "geositta-maritima",
+    "commonName": "Minero chico",
+    "scientificName": "Geositta maritima"
+  },
+  {
+    "id": "geositta-antarctica",
+    "commonName": "Minero austral",
+    "scientificName": "Geositta antarctica"
+  },
+  {
+    "id": "geositta-isabellina",
+    "commonName": "Minero grande",
+    "scientificName": "Geositta isabellina"
+  },
+  {
+    "id": "pygarrhichas-albogularis",
+    "commonName": "Comesebo grande",
+    "scientificName": "Pygarrhichas albogularis"
+  },
+  {
+    "id": "ochetorhynchus-andaecola",
+    "commonName": "Bandurrilla de las piedras",
+    "scientificName": "Ochetorhynchus andaecola"
+  },
+  {
+    "id": "ochetorhynchus-ruficaudus",
+    "commonName": "Bandurrilla de pico recto",
+    "scientificName": "Ochetorhynchus ruficaudus"
+  },
+  {
+    "id": "ochetorhynchus-phoenicurus",
+    "commonName": "Patagón",
+    "scientificName": "Ochetorhynchus phoenicurus"
+  },
+  {
+    "id": "ochetorhynchus-melanurus",
+    "commonName": "Chiricoca",
+    "scientificName": "Ochetorhynchus melanurus"
+  },
+  {
+    "id": "phleocryptes-melanops",
+    "commonName": "Trabajador",
+    "scientificName": "Phleocryptes melanops"
+  },
+  {
+    "id": "upucerthia-saturatior",
+    "commonName": "Bandurrilla de los bosques",
+    "scientificName": "Upucerthia saturatior"
+  },
+  {
+    "id": "upucerthia-dumetaria",
+    "commonName": "Bandurrilla común",
+    "scientificName": "Upucerthia dumetaria"
+  },
+  {
+    "id": "upucerthia-albigula",
+    "commonName": "Bandurrilla de Arica",
+    "scientificName": "Upucerthia albigula"
+  },
+  {
+    "id": "upucerthia-validirostris",
+    "commonName": "Bandurrilla de la puna",
+    "scientificName": "Upucerthia validirostris"
+  },
+  {
+    "id": "cinclodes-fuscus",
+    "commonName": "Churrete acanelado",
+    "scientificName": "Cinclodes fuscus"
+  },
+  {
+    "id": "cinclodes-antarcticus",
+    "commonName": "Churrete austral",
+    "scientificName": "Cinclodes antarcticus"
+  },
+  {
+    "id": "cinclodes-albiventris",
+    "commonName": "Churrete de alas crema",
+    "scientificName": "Cinclodes albiventris"
+  },
+  {
+    "id": "cinclodes-oustaleti",
+    "commonName": "Churrete chico",
+    "scientificName": "Cinclodes oustaleti"
+  },
+  {
+    "id": "cinclodes-atacamensis",
+    "commonName": "Churrete de alas blancas",
+    "scientificName": "Cinclodes atacamensis"
+  },
+  {
+    "id": "cinclodes-patagonicus",
+    "commonName": "Churrete patagónico",
+    "scientificName": "Cinclodes patagonicus"
+  },
+  {
+    "id": "cinclodes-nigrofumosus",
+    "commonName": "Churrete costero",
+    "scientificName": "Cinclodes nigrofumosus"
+  },
+  {
+    "id": "aphrastura-spinicauda",
+    "commonName": "Rayadito",
+    "scientificName": "Aphrastura spinicauda"
+  },
+  {
+    "id": "aphrastura-masafuerae",
+    "commonName": "Rayadito de Masafuera",
+    "scientificName": "Aphrastura masafuerae"
+  },
+  {
+    "id": "sylviorthorhynchus-desmursii",
+    "commonName": "Colilarga",
+    "scientificName": "Sylviorthorhynchus desmursii"
+  },
+  {
+    "id": "leptasthenura-aegithaloides",
+    "commonName": "Tijeral común",
+    "scientificName": "Leptasthenura aegithaloides"
+  },
+  {
+    "id": "leptasthenura-striata",
+    "commonName": "Tijeral listado",
+    "scientificName": "Leptasthenura striata"
+  },
+  {
+    "id": "asthenes-dorbignyi",
+    "commonName": "Canastero del norte",
+    "scientificName": "Asthenes dorbignyi"
+  },
+  {
+    "id": "asthenes-anthoides",
+    "commonName": "Canastero del sur",
+    "scientificName": "Asthenes anthoides"
+  },
+  {
+    "id": "asthenes-modesta",
+    "commonName": "Canastero chico",
+    "scientificName": "Asthenes modesta"
+  },
+  {
+    "id": "asthenes-pyrrholeuca",
+    "commonName": "Canastero de cola larga",
+    "scientificName": "Asthenes pyrrholeuca"
+  },
+  {
+    "id": "asthenes-pudibunda",
+    "commonName": "Canastero de las quebradas",
+    "scientificName": "Asthenes pudibunda"
+  },
+  {
+    "id": "pseudasthenes-humicola",
+    "commonName": "Canastero chileno",
+    "scientificName": "Pseudasthenes humicola"
+  },
+  {
+    "id": "phytotoma-rutila",
+    "commonName": "Cortarramas",
+    "scientificName": "Phytotoma rutila"
+  },
+  {
+    "id": "phytotoma-rara",
+    "commonName": "Rara",
+    "scientificName": "Phytotoma rara"
+  },
+  {
+    "id": "elaenia-albiceps",
+    "commonName": "Fío-fío",
+    "scientificName": "Elaenia albiceps"
+  },
+  {
+    "id": "anairetes-reguloides",
+    "commonName": "Cachudito de cresta blanca",
+    "scientificName": "Anairetes reguloides"
+  },
+  {
+    "id": "anairetes-flavirostris",
+    "commonName": "Cachudito del norte",
+    "scientificName": "Anairetes flavirostris"
+  },
+  {
+    "id": "anairetes-parulus",
+    "commonName": "Cachudito común",
+    "scientificName": "Anairetes parulus"
+  },
+  {
+    "id": "anairetes-fernandezianus",
+    "commonName": "Cachudito de Juan Fernández",
+    "scientificName": "Anairetes fernandezianus"
+  },
+  {
+    "id": "pseudocolopteryx-citreola",
+    "commonName": "Pájaro amarillo",
+    "scientificName": "Pseudocolopteryx citreola"
+  },
+  {
+    "id": "muscigralla-brevicauda",
+    "commonName": "Cazamoscas de cola corta",
+    "scientificName": "Muscigralla brevicauda"
+  },
+  {
+    "id": "pitangus-sulphuratus",
+    "commonName": "Benteveo",
+    "scientificName": "Pitangus sulphuratus"
+  },
+  {
+    "id": "machetornis-rixosa",
+    "commonName": "Picabuey",
+    "scientificName": "Machetornis rixosa"
+  },
+  {
+    "id": "megarynchus-pitangua",
+    "commonName": "Pintaguá",
+    "scientificName": "Megarynchus pitangua"
+  },
+  {
+    "id": "myiodynastes-luteiventris",
+    "commonName": "Benteveo de vientre azufre",
+    "scientificName": "Myiodynastes luteiventris"
+  },
+  {
+    "id": "myiodynastes-maculatus",
+    "commonName": "Benteveo rayado",
+    "scientificName": "Myiodynastes maculatus"
+  },
+  {
+    "id": "empidonomus-aurantioatrocristatus",
+    "commonName": "Tuquito gris",
+    "scientificName": "Empidonomus aurantioatrocristatus"
+  },
+  {
+    "id": "tyrannus-melancholicus",
+    "commonName": "Suirirí real",
+    "scientificName": "Tyrannus melancholicus"
+  },
+  {
+    "id": "tyrannus-savana",
+    "commonName": "Cazamoscas tijereta",
+    "scientificName": "Tyrannus savana"
+  },
+  {
+    "id": "tyrannus-tyrannus",
+    "commonName": "Suirirí boreal",
+    "scientificName": "Tyrannus tyrannus"
+  },
+  {
+    "id": "casiornis-rufus",
+    "commonName": "Burlisto castaño",
+    "scientificName": "Casiornis rufus"
+  },
+  {
+    "id": "myiophobus-fasciatus",
+    "commonName": "Cazamoscas de pico chato",
+    "scientificName": "Myiophobus fasciatus"
+  },
+  {
+    "id": "colorhamphus-parvirostris",
+    "commonName": "Viudita",
+    "scientificName": "Colorhamphus parvirostris"
+  },
+  {
+    "id": "ochthoeca-oenanthoides",
+    "commonName": "Pitajo rojizo",
+    "scientificName": "Ochthoeca oenanthoides"
+  },
+  {
+    "id": "ochthoeca-leucophrys",
+    "commonName": "Pitajo gris",
+    "scientificName": "Ochthoeca leucophrys"
+  },
+  {
+    "id": "pyrocephalus-rubinus",
+    "commonName": "Saca-tu-real",
+    "scientificName": "Pyrocephalus rubinus"
+  },
+  {
+    "id": "lessonia-rufa",
+    "commonName": "Colegial austral",
+    "scientificName": "Lessonia rufa"
+  },
+  {
+    "id": "lessonia-oreas",
+    "commonName": "Colegial del norte",
+    "scientificName": "Lessonia oreas"
+  },
+  {
+    "id": "hymenops-perspicillatus",
+    "commonName": "Run-run",
+    "scientificName": "Hymenops perspicillatus"
+  },
+  {
+    "id": "knipolegus-aterrimus",
+    "commonName": "Viudita negra",
+    "scientificName": "Knipolegus aterrimus"
+  },
+  {
+    "id": "muscisaxicola-maculirostris",
+    "commonName": "Dormilona chica",
+    "scientificName": "Muscisaxicola maculirostris"
+  },
+  {
+    "id": "muscisaxicola-juninensis",
+    "commonName": "Dormilona de la puna",
+    "scientificName": "Muscisaxicola juninensis"
+  },
+  {
+    "id": "muscisaxicola-cinereus",
+    "commonName": "Dormilona cenicienta",
+    "scientificName": "Muscisaxicola cinereus"
+  },
+  {
+    "id": "muscisaxicola-albifrons",
+    "commonName": "Dormilona gigante",
+    "scientificName": "Muscisaxicola albifrons"
+  },
+  {
+    "id": "muscisaxicola-flavinucha",
+    "commonName": "Dormila fraile",
+    "scientificName": "Muscisaxicola flavinucha"
+  },
+  {
+    "id": "muscisaxicola-rufivertex",
+    "commonName": "Dormilona de nuca roijza",
+    "scientificName": "Muscisaxicola rufivertex"
+  },
+  {
+    "id": "muscisaxicola-maclovianus",
+    "commonName": "Dormilona tontita",
+    "scientificName": "Muscisaxicola maclovianus"
+  },
+  {
+    "id": "muscisaxicola-albilora",
+    "commonName": "Dormilona de ceja blanca",
+    "scientificName": "Muscisaxicola albilora"
+  },
+  {
+    "id": "muscisaxicola-capistratus",
+    "commonName": "Dormilona rufa",
+    "scientificName": "Muscisaxicola capistratus"
+  },
+  {
+    "id": "muscisaxicola-frontalis",
+    "commonName": "Dormilona de frente negra",
+    "scientificName": "Muscisaxicola frontalis"
+  },
+  {
+    "id": "cnemarchus-rufipennis",
+    "commonName": "Birro gris",
+    "scientificName": "Cnemarchus rufipennis"
+  },
+  {
+    "id": "pyrope-pyrope",
+    "commonName": "Diucón",
+    "scientificName": "Pyrope pyrope"
+  },
+  {
+    "id": "neoxolmis-coronatus",
+    "commonName": "Monjita coronada",
+    "scientificName": "Neoxolmis coronatus"
+  },
+  {
+    "id": "neoxolmis-rubetra",
+    "commonName": "Monjita castaña",
+    "scientificName": "Neoxolmis rubetra"
+  },
+  {
+    "id": "neoxolmis-rufiventris",
+    "commonName": "Cazamoscas chocolate",
+    "scientificName": "Neoxolmis rufiventris"
+  },
+  {
+    "id": "agriornis-montanus",
+    "commonName": "Mero gaucho",
+    "scientificName": "Agriornis montanus"
+  },
+  {
+    "id": "agriornis-albicauda",
+    "commonName": "Mero de la puna",
+    "scientificName": "Agriornis albicauda"
+  },
+  {
+    "id": "agriornis-lividus",
+    "commonName": "Mero grande",
+    "scientificName": "Agriornis lividus"
+  },
+  {
+    "id": "agriornis-micropterus",
+    "commonName": "Mero de Tarapacá",
+    "scientificName": "Agriornis micropterus"
+  },
+  {
+    "id": "agriornis-murinus",
+    "commonName": "Mero chico",
+    "scientificName": "Agriornis murinus"
+  },
+  {
+    "id": "empidonax-alnorum",
+    "commonName": "Mosqueta boreal",
+    "scientificName": "Empidonax alnorum"
+  },
+  {
+    "id": "contopus-sordidulus",
+    "commonName": "Pibí occidental",
+    "scientificName": "Contopus sordidulus"
+  },
+  {
+    "id": "tachuris-rubrigastra",
+    "commonName": "Siete colores",
+    "scientificName": "Tachuris rubrigastra"
+  },
+  {
+    "id": "vireo-olivaceus",
+    "commonName": "Verderón de ojos rojos",
+    "scientificName": "Vireo olivaceus"
+  },
+  {
+    "id": "vireo-chivi",
+    "commonName": "Vireo chiví",
+    "scientificName": "Vireo chivi"
+  },
+  {
+    "id": "pygochelidon-cyanoleuca",
+    "commonName": "Golondrina de dorso negro",
+    "scientificName": "Pygochelidon cyanoleuca"
+  },
+  {
+    "id": "alopochelidon-fucata",
+    "commonName": "Golondrina de cabeza rojiza",
+    "scientificName": "Alopochelidon fucata"
+  },
+  {
+    "id": "orochelidon-andecola",
+    "commonName": "Golondrina de los riscos",
+    "scientificName": "Orochelidon andecola"
+  },
+  {
+    "id": "progne-tapera",
+    "commonName": "Golondrina parda",
+    "scientificName": "Progne tapera"
+  },
+  {
+    "id": "progne-chalybea",
+    "commonName": "Golondrina doméstica",
+    "scientificName": "Progne chalybea"
+  },
+  {
+    "id": "progne-elegans",
+    "commonName": "Golondrina negra",
+    "scientificName": "Progne elegans"
+  },
+  {
+    "id": "progne-murphyi",
+    "commonName": "Golondrina peruana",
+    "scientificName": "Progne murphyi"
+  },
+  {
+    "id": "tachycineta-leucopyga",
+    "commonName": "Golondrina chilena",
+    "scientificName": "Tachycineta leucopyga"
+  },
+  {
+    "id": "riparia-riparia",
+    "commonName": "Golondrina barranquera",
+    "scientificName": "Riparia riparia"
+  },
+  {
+    "id": "hirundo-rustica",
+    "commonName": "Golondrina bermeja",
+    "scientificName": "Hirundo rustica"
+  },
+  {
+    "id": "petrochelidon-pyrrhonota",
+    "commonName": "Golondrina grande",
+    "scientificName": "Petrochelidon pyrrhonota"
+  },
+  {
+    "id": "troglodytes-musculus",
+    "commonName": "Chercán común",
+    "scientificName": "Troglodytes musculus"
+  },
+  {
+    "id": "cistothorus-platensis",
+    "commonName": "Chercán de las vegas",
+    "scientificName": "Cistothorus platensis"
+  },
+  {
+    "id": "catharus-fuscescens",
+    "commonName": "Zorzalito dorsirrojo",
+    "scientificName": "Catharus fuscescens"
+  },
+  {
+    "id": "catharus-ustulatus",
+    "commonName": "Zorzalito de Swainson",
+    "scientificName": "Catharus ustulatus"
+  },
+  {
+    "id": "turdus-falcklandii",
+    "commonName": "Zorzal patagónico",
+    "scientificName": "Turdus falcklandii"
+  },
+  {
+    "id": "turdus-amaurochalinus",
+    "commonName": "Zorzal chalchalero",
+    "scientificName": "Turdus amaurochalinus"
+  },
+  {
+    "id": "turdus-chiguanco",
+    "commonName": "Zorzal negro",
+    "scientificName": "Turdus chiguanco"
+  },
+  {
+    "id": "mimus-thenca",
+    "commonName": "Tenca chilena",
+    "scientificName": "Mimus thenca"
+  },
+  {
+    "id": "mimus-patagonicus",
+    "commonName": "Tenca patagónica",
+    "scientificName": "Mimus patagonicus"
+  },
+  {
+    "id": "mimus-saturninus",
+    "commonName": "Tenca calandria",
+    "scientificName": "Mimus saturninus"
+  },
+  {
+    "id": "mimus-triurus",
+    "commonName": "Tenca de alas blancas",
+    "scientificName": "Mimus triurus"
+  },
+  {
+    "id": "sturnus-vulgaris",
+    "commonName": "Estornino pinto",
+    "scientificName": "Sturnus vulgaris"
+  },
+  {
+    "id": "passer-domesticus",
+    "commonName": "Gorrión",
+    "scientificName": "Passer domesticus"
+  },
+  {
+    "id": "anthus-peruvianus",
+    "commonName": "Bailarín chico peruano",
+    "scientificName": "Anthus peruvianus"
+  },
+  {
+    "id": "anthus-correndera",
+    "commonName": "Bailarín chico común",
+    "scientificName": "Anthus correndera"
+  },
+  {
+    "id": "anthus-hellmayri",
+    "commonName": "Bailarín chico pálido",
+    "scientificName": "Anthus hellmayri"
+  },
+  {
+    "id": "spinus-crassirostris",
+    "commonName": "Jilguero grande",
+    "scientificName": "Spinus crassirostris"
+  },
+  {
+    "id": "spinus-magellanicus",
+    "commonName": "Jilguero peruano",
+    "scientificName": "Spinus magellanicus"
+  },
+  {
+    "id": "spinus-atratus",
+    "commonName": "Jilguero negro",
+    "scientificName": "Spinus atratus"
+  },
+  {
+    "id": "spinus-uropygialis",
+    "commonName": "Jilguero cordillerano",
+    "scientificName": "Spinus uropygialis"
+  },
+  {
+    "id": "spinus-barbatus",
+    "commonName": "Jilguero austral",
+    "scientificName": "Spinus barbatus"
+  },
+  {
+    "id": "zonotrichia-capensis",
+    "commonName": "Chincol",
+    "scientificName": "Zonotrichia capensis"
+  },
+  {
+    "id": "dolichonyx-oryzivorus",
+    "commonName": "Charlatán",
+    "scientificName": "Dolichonyx oryzivorus"
+  },
+  {
+    "id": "leistes-superciliaris",
+    "commonName": "Loica argentina",
+    "scientificName": "Leistes superciliaris"
+  },
+  {
+    "id": "leistes-bellicosus",
+    "commonName": "Loica peruana",
+    "scientificName": "Leistes bellicosus"
+  },
+  {
+    "id": "leistes-loyca",
+    "commonName": "Loica común",
+    "scientificName": "Leistes loyca"
+  },
+  {
+    "id": "icterus-pyrrhopterus",
+    "commonName": "Turpial variable",
+    "scientificName": "Icterus pyrrhopterus"
+  },
+  {
+    "id": "icterus-galbula",
+    "commonName": "Bolsero de Baltimore",
+    "scientificName": "Icterus galbula"
+  },
+  {
+    "id": "molothrus-rufoaxillaris",
+    "commonName": "Mirlo de pico corto",
+    "scientificName": "Molothrus rufoaxillaris"
+  },
+  {
+    "id": "molothrus-bonariensis",
+    "commonName": "Mirlo común",
+    "scientificName": "Molothrus bonariensis"
+  },
+  {
+    "id": "curaeus-curaeus",
+    "commonName": "Tordo",
+    "scientificName": "Curaeus curaeus"
+  },
+  {
+    "id": "agelasticus-thilius",
+    "commonName": "Trile",
+    "scientificName": "Agelasticus thilius"
+  },
+  {
+    "id": "parkesia-noveboracensis",
+    "commonName": "Reinita acuática",
+    "scientificName": "Parkesia noveboracensis"
+  },
+  {
+    "id": "leiothlypis-peregrina",
+    "commonName": "Reinita de Tennessee",
+    "scientificName": "Leiothlypis peregrina"
+  },
+  {
+    "id": "geothlypis-aequinoctialis",
+    "commonName": "Arañero de cara negra",
+    "scientificName": "Geothlypis aequinoctialis"
+  },
+  {
+    "id": "setophaga-ruticilla",
+    "commonName": "Candelita americana",
+    "scientificName": "Setophaga ruticilla"
+  },
+  {
+    "id": "setophaga-pitiayumi",
+    "commonName": "Pitiayumí",
+    "scientificName": "Setophaga pitiayumi"
+  },
+  {
+    "id": "setophaga-fusca",
+    "commonName": "Reinita de garganta naranja",
+    "scientificName": "Setophaga fusca"
+  },
+  {
+    "id": "setophaga-striata",
+    "commonName": "Monjita americana",
+    "scientificName": "Setophaga striata"
+  },
+  {
+    "id": "setophaga-virens",
+    "commonName": "Reinita de dorso verde",
+    "scientificName": "Setophaga virens"
+  },
+  {
+    "id": "cardellina-canadensis",
+    "commonName": "Reinita de Canadá",
+    "scientificName": "Cardellina canadensis"
+  },
+  {
+    "id": "piranga-rubra",
+    "commonName": "Piranga",
+    "scientificName": "Piranga rubra"
+  },
+  {
+    "id": "piranga-ludoviciana",
+    "commonName": "Tangara de ala blanca",
+    "scientificName": "Piranga ludoviciana"
+  },
+  {
+    "id": "pheucticus-chrysogaster",
+    "commonName": "Picogrueso de dorso negro",
+    "scientificName": "Pheucticus chrysogaster"
+  },
+  {
+    "id": "pheucticus-aureoventris",
+    "commonName": "Rey del bosque",
+    "scientificName": "Pheucticus aureoventris"
+  },
+  {
+    "id": "spiza-americana",
+    "commonName": "Arrocero americano",
+    "scientificName": "Spiza americana"
+  },
+  {
+    "id": "conirostrum-binghami",
+    "commonName": "Comesebo gigante",
+    "scientificName": "Conirostrum binghami"
+  },
+  {
+    "id": "conirostrum-tamarugense",
+    "commonName": "Comesebo de los tamarugales",
+    "scientificName": "Conirostrum tamarugense"
+  },
+  {
+    "id": "conirostrum-cinereum",
+    "commonName": "Comesebo chico",
+    "scientificName": "Conirostrum cinereum"
+  },
+  {
+    "id": "sicalis-lutea",
+    "commonName": "Chirihue puneño",
+    "scientificName": "Sicalis lutea"
+  },
+  {
+    "id": "sicalis-uropygialis",
+    "commonName": "Chirihue cordillerano",
+    "scientificName": "Sicalis uropygialis"
+  },
+  {
+    "id": "sicalis-auriventris",
+    "commonName": "Chirihue dorado",
+    "scientificName": "Sicalis auriventris"
+  },
+  {
+    "id": "sicalis-olivascens",
+    "commonName": "Chirihue verdoso",
+    "scientificName": "Sicalis olivascens"
+  },
+  {
+    "id": "sicalis-lebruni",
+    "commonName": "Chirihue austral",
+    "scientificName": "Sicalis lebruni"
+  },
+  {
+    "id": "sicalis-flaveola",
+    "commonName": "Chirihue azafrán",
+    "scientificName": "Sicalis flaveola"
+  },
+  {
+    "id": "sicalis-luteola",
+    "commonName": "Chirihue común",
+    "scientificName": "Sicalis luteola"
+  },
+  {
+    "id": "sicalis-raimondii",
+    "commonName": "Chirihue de Raimondi",
+    "scientificName": "Sicalis raimondii"
+  },
+  {
+    "id": "phrygilus-atriceps",
+    "commonName": "Cometocino del norte",
+    "scientificName": "Phrygilus atriceps"
+  },
+  {
+    "id": "phrygilus-gayi",
+    "commonName": "Cometocino de Gay",
+    "scientificName": "Phrygilus gayi"
+  },
+  {
+    "id": "phrygilus-patagonicus",
+    "commonName": "Cometocino patagónico",
+    "scientificName": "Phrygilus patagonicus"
+  },
+  {
+    "id": "geospizopsis-unicolor",
+    "commonName": "Pájaro plomo",
+    "scientificName": "Geospizopsis unicolor"
+  },
+  {
+    "id": "geospizopsis-plebejus",
+    "commonName": "Plebeyo",
+    "scientificName": "Geospizopsis plebejus"
+  },
+  {
+    "id": "rhopospina-fruticeti",
+    "commonName": "Yal común",
+    "scientificName": "Rhopospina fruticeti"
+  },
+  {
+    "id": "rhopospina-alaudina",
+    "commonName": "Platero",
+    "scientificName": "Rhopospina alaudina"
+  },
+  {
+    "id": "idiopsar-dorsalis",
+    "commonName": "Cometocino de dorso castaño",
+    "scientificName": "Idiopsar dorsalis"
+  },
+  {
+    "id": "idiopsar-erythronotus",
+    "commonName": "Cometocino de Arica",
+    "scientificName": "Idiopsar erythronotus"
+  },
+  {
+    "id": "idiopsar-speculifer",
+    "commonName": "Diuca de alas blancas",
+    "scientificName": "Idiopsar speculifer"
+  },
+  {
+    "id": "melanodera-melanodera",
+    "commonName": "Yal austral",
+    "scientificName": "Melanodera melanodera"
+  },
+  {
+    "id": "melanodera-xanthogramma",
+    "commonName": "Yal cordillerano",
+    "scientificName": "Melanodera xanthogramma"
+  },
+  {
+    "id": "catamenia-analis",
+    "commonName": "Semillero",
+    "scientificName": "Catamenia analis"
+  },
+  {
+    "id": "diglossa-brunneiventris",
+    "commonName": "Comesebo negro",
+    "scientificName": "Diglossa brunneiventris"
+  },
+  {
+    "id": "volatinia-jacarina",
+    "commonName": "Negrillo",
+    "scientificName": "Volatinia jacarina"
+  },
+  {
+    "id": "tersina-viridis",
+    "commonName": "Tersina",
+    "scientificName": "Tersina viridis"
+  },
+  {
+    "id": "sporophila-lineola",
+    "commonName": "Corbatita overo",
+    "scientificName": "Sporophila lineola"
+  },
+  {
+    "id": "sporophila-telasco",
+    "commonName": "Corbatita del norte",
+    "scientificName": "Sporophila telasco"
+  },
+  {
+    "id": "sporophila-caerulescens",
+    "commonName": "Corbatita de doble collar",
+    "scientificName": "Sporophila caerulescens"
+  },
+  {
+    "id": "saltator-aurantiirostris",
+    "commonName": "Pepitero",
+    "scientificName": "Saltator aurantiirostris"
+  },
+  {
+    "id": "xenospingus-concolor",
+    "commonName": "Pizarrita",
+    "scientificName": "Xenospingus concolor"
+  },
+  {
+    "id": "microspingus-torquatus",
+    "commonName": "Monterita de collar",
+    "scientificName": "Microspingus torquatus"
+  },
+  {
+    "id": "diuca-diuca",
+    "commonName": "Diuca común",
+    "scientificName": "Diuca diuca"
+  },
+  {
+    "id": "rauenia-bonariensis",
+    "commonName": "Naranjero",
+    "scientificName": "Rauenia bonariensis"
+  },
+  {
+    "id": "thraupis-sayaca",
+    "commonName": "Celestino",
+    "scientificName": "Thraupis sayaca"
+  }
+]

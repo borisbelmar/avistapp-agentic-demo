@@ -68,7 +68,7 @@ Estados: **Pendiente** → **En curso** → **En revisión** → **Aprobada**. Q
 |---|---|---|---|
 | 0 | Inicializar el proyecto | Repositorio con el stack instalado y los comandos de calidad sin errores | Aprobada |
 | 1 | Levantar proyecto de prueba | La app abre en Expo Go con el tema, las fuentes y el área segura | Aprobada |
-| 2 | Base local, dominio y catálogo | La app crea su base con el catálogo y el administrador; reglas puras probadas | Pendiente |
+| 2 | Base local, dominio y catálogo | La app crea su base con el catálogo y el administrador; reglas puras probadas | En revisión |
 | 3 | Login y registro | Crear cuenta, iniciar y cerrar sesión; pestañas Muro y Perfil | Pendiente |
 | 4 | Cámara y ubicación | Tomar una foto con GPS y verla en Nuevo avistamiento | Pendiente |
 | 5 | Publicar avistamiento | Publicar y ver la publicación primera en el Muro | Pendiente |
@@ -134,7 +134,7 @@ Estados: **Pendiente** → **En curso** → **En revisión** → **Aprobada**. Q
 - `src/domain`: `types.ts` (`VoteValue` como `{ UP: 1, DOWN: -1 } as const`), `constants.ts`, `errors.ts` (`DomainError`, códigos de DOMAIN §6, mensajes de DESIGN §8, `errorMessage` que registra los errores inesperados con `console.error`), `schemas.ts` y `rules.ts` (`isHidden`, `userScore`, `progress`).
 - `src/components/format.ts`: `formatScore`, `formatCoords`, `formatRelativeDate`, `formatDateTime` (a mano) y `normalizeForSearch`.
 - `src/data/db.ts` (interfaz `Db`), migraciones con `PRAGMA user_version` (cada una en una transacción), esquema de STACK §4 en la migración 1, `seed.ts` (catálogo y administrador de §6; para el hash usa `src/auth/password.ts`).
-- `assets/species.json`: `{ id, commonName, scientificName }`, con `id` = *slug* del nombre científico. Fuente: [Anexo:Aves de Chile](https://es.wikipedia.org/wiki/Anexo:Aves_de_Chile), con los nombres comunes usados en Chile. Se puede preparar en paralelo con el resto.
+- `assets/species.json`: `{ id, commonName, scientificName }`, con `id` = *slug* del nombre científico. Fuente: [Anexo:Aves de Chile](https://es.wikipedia.org/wiki/Anexo:Aves_de_Chile), con los nombres comunes usados en Chile. Se puede preparar en paralelo con el resto. Revisión `oldid=175351842`, sin especies hipotéticas (H) ni extintas (Ex): 550 especies. Con dos nombres ("A / B") se usa el primero.
 - `SQLiteProvider` en el layout raíz: `onInit` con `PRAGMA foreign_keys = ON` y `migrate`.
 - `listSpecies(db, actor)` con la marca `inCollection`.
 - Pruebas: `src/data/testing/testDb.ts` sobre `better-sqlite3` y los *manual mocks* de `__mocks__/` que hagan falta (`expo-crypto`).
@@ -232,7 +232,7 @@ Estados: **Pendiente** → **En curso** → **En revisión** → **Aprobada**. Q
 - **[auto]** `isNewSpecies` es `true` la primera vez y `false` la segunda con la misma especie.
 - **[auto]** Si escribir la foto falla, `createSighting` rechaza, no queda ningún avistamiento y un reintento funciona (SG1a; se simula con `jest.spyOn` sobre el mock de `writeAsStringAsync`).
 - **[auto]** El muro se ordena por `createdAt` descendente.
-- **[dispositivo]** "Publicar" está deshabilitado hasta elegir una especie; buscar "condor" encuentra "Cóndor andino".
+- **[dispositivo]** "Publicar" está deshabilitado hasta elegir una especie; buscar "condor" encuentra "Cóndor".
 - **[dispositivo]** Al publicar, la app vuelve al Muro (no a la cámara) y la publicación aparece primera; si la especie es nueva, aparece el aviso con +10.
 - **[dispositivo]** La foto sigue visible después de cerrar y reabrir la app.
 

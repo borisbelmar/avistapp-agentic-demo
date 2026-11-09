@@ -9,7 +9,10 @@ import { Fraunces_400Regular_Italic, Fraunces_600SemiBold } from "@expo-google-f
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
+import { SQLiteProvider } from "expo-sqlite";
 import { useEffect } from "react";
+
+import { initDb } from "@/data/migrations";
 
 // En el nivel del módulo no hay contexto async: el .catch cumple el papel del try (STACK §6).
 SplashScreen.preventAutoHideAsync().catch(console.error);
@@ -30,5 +33,9 @@ export default function RootLayout() {
 
   if (!loaded && !error) return null;
 
-  return <Stack screenOptions={{ headerShown: false }} />;
+  return (
+    <SQLiteProvider databaseName="avistapp.db" onInit={initDb}>
+      <Stack screenOptions={{ headerShown: false }} />
+    </SQLiteProvider>
+  );
 }

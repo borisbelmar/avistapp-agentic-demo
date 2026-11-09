@@ -229,7 +229,7 @@ Lista de tarjetas (`SightingCard`), de la más reciente a la más antigua. Se ac
 Componente `SpeciesPicker`, un `Modal` a pantalla completa (estilo `pageSheet` en iOS). Se usa en Nuevo avistamiento y en Mis publicaciones.
 
 - Título "Elige la especie" y campo de búsqueda "Buscar por nombre común o científico".
-- La búsqueda no distingue mayúsculas ni tildes: "condor" encuentra "Cóndor andino".
+- La búsqueda no distingue mayúsculas ni tildes: "condor" encuentra "Cóndor".
 - Cada fila muestra el nombre común (Fraunces 600, 16 px) y debajo el científico (`scientific`). Las especies que ya están en la colección del usuario muestran el ícono `leaf` en `secondary-600` y el texto "En tu colección"; así el usuario sabe si la foto le dará el bonus.
 - Sin resultados: "No encontramos esa especie."
 
