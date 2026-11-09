@@ -70,8 +70,8 @@ Estados: **Pendiente** → **En curso** → **En revisión** → **Aprobada**. Q
 | 1 | Levantar proyecto de prueba | La app abre en Expo Go con el tema, las fuentes y el área segura | Aprobada |
 | 2 | Base local, dominio y catálogo | La app crea su base con el catálogo y el administrador; reglas puras probadas | Aprobada |
 | 3 | Login y registro | Crear cuenta, iniciar y cerrar sesión; pestañas Muro y Perfil | Aprobada |
-| 4 | Cámara y ubicación | Tomar una foto con GPS y verla en Nuevo avistamiento | Pendiente |
-| 5 | Publicar avistamiento | Publicar y ver la publicación primera en el Muro | Pendiente |
+| 4 | Cámara y ubicación | Tomar una foto con GPS y verla en Nuevo avistamiento | Aprobada |
+| 5 | Publicar avistamiento | Publicar y ver la publicación primera en el Muro | En curso |
 | 6 | Votos y moderación | Votar, ocultar y moderar desde el Muro | Pendiente |
 | 7 | Perfil y colección | Puntaje desglosado y colección en el Perfil | Pendiente |
 | 8 | Mis publicaciones | Cambiar la especie y eliminar publicaciones propias | Pendiente |
