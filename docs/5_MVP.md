@@ -74,7 +74,7 @@ Estados: **Pendiente** → **En curso** → **En revisión** → **Aprobada**. Q
 | 5 | Publicar avistamiento | Publicar y ver la publicación primera en el Muro | Aprobada |
 | 6 | Votos y moderación | Votar, ocultar y moderar desde el Muro | Aprobada |
 | 7 | Perfil y colección | Puntaje desglosado y colección en el Perfil | Aprobada |
-| 8 | Mis publicaciones | Cambiar la especie y eliminar publicaciones propias | En revisión |
+| 8 | Mis publicaciones | Cambiar la especie y eliminar publicaciones propias | Aprobada |
 | 9 | Cierre | Recorrido completo aprobado en Android e iPhone | Pendiente |
 
 ## 4. Fases
