@@ -71,7 +71,7 @@ Estados: **Pendiente** → **En curso** → **En revisión** → **Aprobada**. Q
 | 2 | Base local, dominio y catálogo | La app crea su base con el catálogo y el administrador; reglas puras probadas | Aprobada |
 | 3 | Login y registro | Crear cuenta, iniciar y cerrar sesión; pestañas Muro y Perfil | Aprobada |
 | 4 | Cámara y ubicación | Tomar una foto con GPS y verla en Nuevo avistamiento | Aprobada |
-| 5 | Publicar avistamiento | Publicar y ver la publicación primera en el Muro | En curso |
+| 5 | Publicar avistamiento | Publicar y ver la publicación primera en el Muro | Aprobada |
 | 6 | Votos y moderación | Votar, ocultar y moderar desde el Muro | Pendiente |
 | 7 | Perfil y colección | Puntaje desglosado y colección en el Perfil | Pendiente |
 | 8 | Mis publicaciones | Cambiar la especie y eliminar publicaciones propias | Pendiente |
@@ -220,6 +220,7 @@ Estados: **Pendiente** → **En curso** → **En revisión** → **Aprobada**. Q
 - `publish.tsx`: "Publicar" deshabilitado hasta elegir especie y con indicador mientras guarda; error sobre el botón; al terminar, `router.dismissTo({ pathname: "/(tabs)", params })`.
 - `getFeed` (Q1) y el Muro con `SightingCard` (foto 4:3, autor, fecha relativa, nombres, coordenadas; propia: puntaje y "Tu publicación"); recarga con `useFocusEffect` y al deslizar; estado vacío con "Tomar una foto".
 - Aviso de especie nueva (`NewSpeciesBanner`) con el valor de `SPECIES_BONUS`.
+- Datos de prueba en desarrollo (`seedDevData`, `__DEV__`): usuarios, avistamientos con fotos de prueba y votos que se regeneran en cada inicio (§6).
 
 **Trampas conocidas:**
 - No usar la API de clases de `expo-file-system` (`File`, `Directory`, `Paths`): rechaza con `Missing 'READ' permission` en Android.
@@ -350,3 +351,16 @@ Administrador creado por el seed (solo para desarrollo):
 | Correo | `admin@avistapp.local` |
 | Usuario | `admin` |
 | Contraseña | `avistapp-admin` |
+
+### Datos de prueba (solo en desarrollo)
+
+Cada vez que la app inicia en desarrollo (`__DEV__`), `seedDevData` (`src/data/devSeed.ts`, Fase 5) borra los avistamientos, los votos y los usuarios de prueba —todo salvo el administrador y el catálogo— y los recrea, "como si la app se reiniciara". Sirve para probar el Muro sin depender de la cámara real. A diferencia del administrador, el guardado está detrás de `__DEV__`: no corre nunca en una versión publicada y no hace falta quitarlo a mano.
+
+| Usuario | Correo | Contraseña |
+|---|---|---|
+| ana_aves | `ana@avistapp.test` | `avistapp-test` |
+| pedro_birder | `pedro@avistapp.test` | `avistapp-test` |
+| camila_fotos | `camila@avistapp.test` | `avistapp-test` |
+| javier_sur | `javier@avistapp.test` | `avistapp-test` |
+
+Siete avistamientos repartidos entre estos usuarios y el administrador, con fotos de prueba (bloques de color generados sin red) y votos variados; dos son del administrador, con puntaje +4 y −1, visibles de inmediato en el Muro.

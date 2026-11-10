@@ -3,6 +3,7 @@ import { HIDE_THRESHOLD } from "@/domain/constants";
 import type { Actor, Species } from "@/domain/types";
 
 import type { Db } from "./db";
+import { SCORE_SQL } from "./sightings";
 
 export type SpeciesListItem = Species & { inCollection: boolean };
 
@@ -16,7 +17,7 @@ export async function listSpecies(db: Db, actor: Actor): Promise<SpeciesListItem
       EXISTS (
         SELECT 1 FROM sightings g
         WHERE g.speciesId = s.id AND g.authorId = ?
-          AND (SELECT COALESCE(SUM(v.value), 0) FROM votes v WHERE v.sightingId = g.id) > ?
+          AND ${SCORE_SQL} > ?
       ) AS inCollection
     FROM species s`,
     actor.id,

@@ -1,4 +1,5 @@
 import type { Db } from "./db";
+import { seedDevData } from "./devSeed";
 import { seed } from "./seed";
 
 // Esquema de STACK §4, tal cual.
@@ -64,4 +65,8 @@ export async function migrate(db: Db): Promise<void> {
 export async function initDb(db: Db): Promise<void> {
   await db.execAsync("PRAGMA foreign_keys = ON");
   await migrate(db);
+  // Solo en desarrollo: nunca corre en una versión publicada (5_MVP.md §6).
+  if (__DEV__) {
+    await seedDevData(db);
+  }
 }

@@ -233,6 +233,7 @@ Componente `SpeciesPicker`, un `Modal` a pantalla completa (estilo `pageSheet` e
 - La búsqueda no distingue mayúsculas ni tildes: "condor" encuentra "Cóndor".
 - Cada fila muestra el nombre común (Fraunces 600, 16 px) y debajo el científico (`scientific`). Las especies que ya están en la colección del usuario muestran el ícono `leaf` en `secondary-600` y el texto "En tu colección"; así el usuario sabe si la foto le dará el bonus.
 - Sin resultados: "No encontramos esa especie."
+- Botón cerrar (`close`) arriba a la derecha; también cierran el gesto de bajar (iOS) y atrás (Android).
 
 ### 7.6 Perfil
 
@@ -337,7 +338,7 @@ Se usan diálogos nativos (`Alert.alert`) con "Cancelar" a la izquierda y la acc
 ## 9. Accesibilidad
 
 - Contraste AA verificado (§2).
-- Todo botón de solo ícono tiene `accessibilityLabel` ("Voto positivo", "Voto negativo", "Eliminar publicación", "Cerrar sesión", "Cerrar cámara", "Tomar foto") y `accessibilityRole="button"`. Los votos informan si están activos con `accessibilityState={{ selected }}`.
+- Todo botón de solo ícono tiene `accessibilityLabel` ("Voto positivo", "Voto negativo", "Eliminar publicación", "Cerrar sesión", "Cerrar cámara", "Tomar foto", "Cerrar") y `accessibilityRole="button"`. Los votos informan si están activos con `accessibilityState={{ selected }}`.
 - Cada foto tiene `accessibilityLabel`: "Foto de {nombre común} por {usuario}".
 - El estado nunca se comunica solo con color: votos (contorno o relleno), ocultas (insignia con texto) y errores (texto).
 - Áreas táctiles de al menos 44 × 44 px (§4); tamaño de letra del sistema (§3); reducción de movimiento (§5).
