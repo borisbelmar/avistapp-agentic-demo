@@ -1,5 +1,5 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { useFocusEffect } from "expo-router";
+import { router, useFocusEffect } from "expo-router";
 import { useSQLiteContext } from "expo-sqlite";
 import { useCallback, useState } from "react";
 import { ActivityIndicator, Alert, FlatList, Image, Pressable, Text, View } from "react-native";
@@ -113,8 +113,11 @@ export default function ProfileScreen() {
                 </View>
                 <ProgressBar progress={profile.progress} />
               </View>
-              {/* La pantalla llega en la Fase 8 (router.push("/my-sightings")). */}
-              <Button title="Mis publicaciones" variant="secondary" disabled onPress={() => {}} />
+              <Button
+                title="Mis publicaciones"
+                variant="secondary"
+                onPress={() => router.push("/my-sightings")}
+              />
             </View>
           }
           renderItem={({ item }) => (

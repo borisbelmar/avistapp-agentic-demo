@@ -9,9 +9,11 @@ import { VoteValue, type Actor, type User } from "@/domain/types";
 
 import {
   castVote,
+  changeSpecies,
   createSighting,
   deleteSighting,
   getFeed,
+  getMySightings,
   removeVote,
   type CreateSightingInput,
 } from "./sightings";
@@ -305,5 +307,89 @@ describe("deleteSighting", () => {
     const votes = await db.getFirstAsync<{ n: number }>("SELECT COUNT(*) AS n FROM votes WHERE sightingId = ?", id);
     expect(votes!.n).toBe(0);
     expect((await FileSystem.getInfoAsync(photoUrl)).exists).toBe(false);
+  });
+});
+
+describe("getMySightings", () => {
+  it("includes own hidden sightings, marked, newest first, and leaves out other users' sightings", async () => {
+    const db = await freshDb();
+    const ana = await registerUser(db, "ana_aves");
+    const pedro = await registerUser(db, "pedro_birder");
+
+    const s1 = await insertSighting(
+      db,
+      ana.id,
+      "vultur-gryphus",
+      "2026-01-01T09:00:00.000Z",
+      "2026-01-01T09:00:00.000Z",
+    );
+    const s2 = await insertSighting(
+      db,
+      ana.id,
+      "scelorchilus-rubecula",
+      "2026-01-01T10:00:00.000Z",
+      "2026-01-01T10:00:00.000Z",
+    );
+    await insertSighting(db, pedro.id, "vultur-gryphus", "2026-01-01T11:00:00.000Z", "2026-01-01T11:00:00.000Z");
+
+    await hideWithFiveDownVotes(db, s2);
+
+    const items = await getMySightings(db, ana);
+    expect(items.map((item) => item.id)).toEqual([s2, s1]);
+    expect(items.find((item) => item.id === s2)).toMatchObject({ isHidden: true, score: -5 });
+    expect(items.find((item) => item.id === s1)).toMatchObject({ isHidden: false });
+  });
+});
+
+describe("changeSpecies", () => {
+  it("keeps the votes", async () => {
+    const db = await freshDb();
+    const ana = await registerUser(db, "ana_aves");
+    const pedro = await registerUser(db, "pedro_birder");
+    const { id } = await createSighting(db, ana, BASE_INPUT);
+    await castVote(db, pedro, id, VoteValue.UP);
+
+    await changeSpecies(db, ana, id, "scelorchilus-rubecula");
+
+    const item = (await getMySightings(db, ana)).find((i) => i.id === id);
+    expect(item).toMatchObject({ speciesId: "scelorchilus-rubecula", score: 1 });
+    expect((await getFeed(db, pedro)).find((i) => i.id === id)?.myVote).toBe(1);
+  });
+
+  it.each([["another user"], ["admin"]])("rejects anyone but the author with NOT_OWNER (%s)", async (who) => {
+    const db = await freshDb();
+    const ana = await registerUser(db, "ana_aves");
+    const pedro = await registerUser(db, "pedro_birder");
+    const admin = await getAdmin(db);
+    const { id } = await createSighting(db, ana, BASE_INPUT);
+    const actor = who === "another user" ? pedro : admin;
+
+    await expect(changeSpecies(db, actor, id, "scelorchilus-rubecula")).rejects.toMatchObject({
+      code: "NOT_OWNER",
+    });
+
+    expect((await getMySightings(db, ana))[0].speciesId).toBe("vultur-gryphus");
+  });
+
+  it("rejects an unknown species with SPECIES_NOT_FOUND", async () => {
+    const db = await freshDb();
+    const ana = await registerUser(db, "ana_aves");
+    const { id } = await createSighting(db, ana, BASE_INPUT);
+
+    await expect(changeSpecies(db, ana, id, "no-existe")).rejects.toMatchObject({ code: "SPECIES_NOT_FOUND" });
+
+    expect((await getMySightings(db, ana))[0].speciesId).toBe("vultur-gryphus");
+  });
+
+  it("works on a hidden sighting", async () => {
+    const db = await freshDb();
+    const ana = await registerUser(db, "ana_aves");
+    const { id } = await createSighting(db, ana, BASE_INPUT);
+    await hideWithFiveDownVotes(db, id);
+
+    await changeSpecies(db, ana, id, "scelorchilus-rubecula");
+
+    const item = (await getMySightings(db, ana)).find((i) => i.id === id);
+    expect(item).toMatchObject({ speciesId: "scelorchilus-rubecula", score: -5, isHidden: true });
   });
 });

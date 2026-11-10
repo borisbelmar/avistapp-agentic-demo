@@ -36,6 +36,7 @@ function RootNavigator() {
       </Stack.Protected>
       <Stack.Protected guard={!!user} redirectTo="/login">
         <Stack.Screen name="(tabs)" options={{ presentation: "card" }} />
+        <Stack.Screen name="my-sightings" options={{ presentation: "card" }} />
         <Stack.Screen name="capture" options={{ presentation: "fullScreenModal" }} />
         <Stack.Screen name="publish" options={{ presentation: "fullScreenModal" }} />
       </Stack.Protected>

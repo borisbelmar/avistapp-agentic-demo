@@ -5,6 +5,7 @@ import { ActivityIndicator, Alert, FlatList, RefreshControl, View } from "react-
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { useSession } from "@/auth/SessionProvider";
+import { confirmDeleteSighting } from "@/components/confirmDeleteSighting";
 import { EmptyState } from "@/components/EmptyState";
 import { NewSpeciesBanner } from "@/components/NewSpeciesBanner";
 import { SightingCard } from "@/components/SightingCard";
@@ -65,22 +66,15 @@ export default function FeedScreen() {
 
   // Eliminar publicación (DESIGN §8, SG4): confirmación con estilo destructivo antes de borrar.
   function confirmDelete(item: FeedItem) {
-    Alert.alert("¿Eliminar publicación?", "Se borrarán la foto y sus votos. No se puede deshacer.", [
-      { text: "Cancelar", style: "cancel" },
-      {
-        text: "Eliminar",
-        style: "destructive",
-        onPress: async () => {
-          if (!user) return;
-          try {
-            await deleteSighting(db, user, item.id);
-          } catch (e) {
-            Alert.alert(errorMessage(e));
-          }
-          await load();
-        },
-      },
-    ]);
+    confirmDeleteSighting(async () => {
+      if (!user) return;
+      try {
+        await deleteSighting(db, user, item.id);
+      } catch (e) {
+        Alert.alert(errorMessage(e));
+      }
+      await load();
+    });
   }
 
   // Si el Muro estaba desplazado, la publicación nueva queda a la vista.

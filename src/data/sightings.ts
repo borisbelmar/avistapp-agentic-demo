@@ -184,3 +184,36 @@ export async function deleteSighting(db: Db, actor: Actor, sightingId: string): 
   const info = await FileSystem.getInfoAsync(uri);
   if (info.exists) await FileSystem.deleteAsync(uri);
 }
+
+export type MySightingItem = Pick<
+  FeedItem,
+  "id" | "speciesId" | "commonName" | "photoUrl" | "capturedAt" | "score" | "isHidden"
+>;
+
+// getMySightings (DOMAIN §6, Q4): todos los avistamientos del actor, ocultos incluidos y
+// marcados con isHidden, del más reciente al más antiguo (createdAt).
+export async function getMySightings(db: Db, actor: Actor): Promise<MySightingItem[]> {
+  const rows = await db.getAllAsync<Omit<MySightingItem, "isHidden">>(
+    `SELECT g.id, g.speciesId, s.commonName, g.photoUrl, g.capturedAt, ${SCORE_SQL} AS score
+     FROM sightings g
+     JOIN species s ON s.id = g.speciesId
+     WHERE g.authorId = ?
+     ORDER BY g.createdAt DESC`,
+    actor.id,
+  );
+  return rows.map((row) => ({ ...row, photoUrl: resolvePhotoUrl(row.photoUrl), isHidden: isHidden(row.score) }));
+}
+
+// changeSpecies (DOMAIN §6, SG3, C1): solo el autor (tampoco el ADMIN) reemplaza speciesId. Los
+// votos no se tocan y la colección se recalcula al leer (C1). Vale también para un avistamiento
+// oculto (DOMAIN §4: Hidden → Hidden).
+export async function changeSpecies(db: Db, actor: Actor, sightingId: string, speciesId: string): Promise<void> {
+  await db.withExclusiveTransactionAsync(async (txn) => {
+    const row = await txn.getFirstAsync<{ authorId: string }>("SELECT authorId FROM sightings WHERE id = ?", sightingId);
+    if (!row) throw new DomainError("SIGHTING_NOT_FOUND");
+    if (row.authorId !== actor.id) throw new DomainError("NOT_OWNER");
+    const species = await txn.getFirstAsync("SELECT 1 FROM species WHERE id = ?", speciesId);
+    if (!species) throw new DomainError("SPECIES_NOT_FOUND");
+    await txn.runAsync("UPDATE sightings SET speciesId = ? WHERE id = ?", speciesId, sightingId);
+  });
+}
