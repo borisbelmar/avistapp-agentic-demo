@@ -1,7 +1,7 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { router, useLocalSearchParams } from "expo-router";
+import { router, useFocusEffect, useLocalSearchParams } from "expo-router";
 import { useSQLiteContext } from "expo-sqlite";
-import { useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { Image, Pressable, ScrollView, Text, View } from "react-native";
 
 import { useSession } from "@/auth/SessionProvider";
@@ -26,19 +26,23 @@ export default function PublishScreen() {
   const [pickerOpen, setPickerOpen] = useState(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [speciesError, setSpeciesError] = useState<string | null>(null);
 
-  // ponytail: el catálogo es local; si falla, el error genérico aparece sobre "Publicar" y se
-  // reintenta reabriendo la pantalla.
-  useEffect(() => {
-    (async () => {
-      if (!user) return;
-      try {
-        setSpecies(await listSpecies(db, user));
-      } catch (e) {
-        setError(errorMessage(e));
-      }
-    })();
+  const loadSpecies = useCallback(async () => {
+    if (!user) return;
+    setSpeciesError(null);
+    try {
+      setSpecies(await listSpecies(db, user));
+    } catch (e) {
+      setSpeciesError(errorMessage(e));
+    }
   }, [db, user]);
+
+  useFocusEffect(
+    useCallback(() => {
+      loadSpecies();
+    }, [loadSpecies]),
+  );
 
   async function publish() {
     if (!user || !selected) return;
@@ -73,7 +77,7 @@ export default function PublishScreen() {
         >
           <Ionicons name="chevron-back" size={24} color={colors.ink.DEFAULT} />
         </Pressable>
-        <Text className="font-display text-title text-ink">Nuevo avistamiento</Text>
+        <Text className="shrink font-display text-title text-ink">Nuevo avistamiento</Text>
       </View>
       <ScrollView contentContainerClassName="gap-4 pb-8">
         <Image
@@ -81,17 +85,19 @@ export default function PublishScreen() {
           style={{ aspectRatio: 4 / 3 }}
           className="w-full"
           resizeMode="cover"
+          accessible
+          accessibilityLabel={selected ? `Foto de ${selected.commonName} por ${user?.username}` : "Foto recién tomada"}
         />
         <View className="gap-2 px-4">
           <View className="flex-row items-center gap-2">
             <Ionicons name="location-outline" size={16} color={colors.ink.muted} />
-            <Text className="font-sans text-caption text-ink-muted">
+            <Text className="shrink font-sans text-caption text-ink-muted">
               {formatCoords({ latitude: Number(latitude), longitude: Number(longitude) })}
             </Text>
           </View>
           <View className="flex-row items-center gap-2">
             <Ionicons name="time-outline" size={16} color={colors.ink.muted} />
-            <Text className="font-sans text-caption text-ink-muted">{formatDateTime(capturedAt)}</Text>
+            <Text className="shrink font-sans text-caption text-ink-muted">{formatDateTime(capturedAt)}</Text>
           </View>
         </View>
         <View className="gap-1 px-4">
@@ -100,9 +106,9 @@ export default function PublishScreen() {
             onPress={() => setPickerOpen(true)}
             disabled={saving}
             accessibilityRole="button"
-            className="h-12 flex-row items-center justify-between rounded-xl border border-line-strong bg-white px-4"
+            className="min-h-12 flex-row items-center justify-between gap-2 rounded-xl border border-line-strong bg-white px-4 py-2"
           >
-            <Text className={`font-sans text-body ${selected ? "text-ink" : "text-ink-muted"}`}>
+            <Text className={`shrink font-sans text-body ${selected ? "text-ink" : "text-ink-muted"}`}>
               {selected?.commonName ?? "Elige la especie"}
             </Text>
             <Ionicons name="chevron-forward" size={20} color={colors.ink.muted} />
@@ -121,6 +127,8 @@ export default function PublishScreen() {
       <SpeciesPicker
         visible={pickerOpen}
         species={species}
+        error={speciesError}
+        onRetry={loadSpecies}
         onSelect={(s) => {
           setSelected(s);
           setError(null);

@@ -110,7 +110,14 @@ export default function CaptureScreen() {
     });
   }
 
-  if (!cameraPermission || !locationPermission) return <View className="flex-1 bg-black" />;
+  if (!cameraPermission || !locationPermission) {
+    return (
+      <View className="flex-1 items-center justify-center bg-black">
+        <CloseButton />
+        <ActivityIndicator color={colors.primary[600]} />
+      </View>
+    );
+  }
   if (!cameraPermission.granted) {
     return (
       <PermissionScreen text={CAMERA_PERMISSION_TEXT} permission={cameraPermission} request={requestCameraPermission} />
@@ -146,7 +153,7 @@ export default function CaptureScreen() {
         {isShooting ? (
           <View className="flex-row items-center gap-2 rounded-xl bg-black/40 px-3 py-2">
             <ActivityIndicator color={colors.white} />
-            <Text className="font-sans text-label text-white">Obteniendo ubicación…</Text>
+            <Text className="shrink font-sans text-label text-white">Obteniendo ubicación…</Text>
           </View>
         ) : null}
         {error ? (

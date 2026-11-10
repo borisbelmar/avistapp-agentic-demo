@@ -44,7 +44,7 @@ export function TextField<T extends FieldValues>({
           }}
           secureTextEntry={secureTextEntry ? hidden : undefined}
           accessibilityLabel={label}
-          className={`h-12 rounded-xl bg-white px-4 font-sans text-[16px] text-ink ${
+          className={`min-h-12 rounded-xl bg-white px-4 font-sans text-[16px] text-ink ${
             secureTextEntry ? "pr-12" : ""
           } ${focused ? "border-2 border-primary-600" : "border border-line-strong"}`}
           {...inputProps}

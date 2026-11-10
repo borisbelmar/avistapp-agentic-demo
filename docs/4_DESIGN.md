@@ -80,7 +80,7 @@ Se cargan con `@expo-google-fonts/fraunces` y `@expo-google-fonts/figtree`. Los 
 | `label` | Figtree 600 | 14 / 20 | Botones, etiquetas de campos, pestañas |
 | `caption` | Figtree 400 | 13 / 18 | Autor, fecha, coordenadas |
 
-El texto respeta el tamaño de letra del sistema (`allowFontScaling` activo).
+El texto respeta el tamaño de letra del sistema (`allowFontScaling` activo), también en el máximo de accesibilidad: los contenedores con texto tienen alto mínimo, no fijo. Excepciones: las etiquetas de la barra de pestañas, de alto fijo (como en iOS), y la inicial del avatar, que es decorativa.
 
 ## 4. Forma, espacio e íconos
 
@@ -109,6 +109,8 @@ Poco y con propósito. Todo se desactiva si el sistema tiene activada la opción
 | Una publicación se oculta tras un voto | La tarjeta se desvanece y sale del muro |
 
 Las transiciones entre pantallas son las nativas de Expo Router.
+
+Con la reducción de movimiento activa, el desplazamiento del Muro al publicar y la apertura del selector de especie también ocurren sin animación.
 
 ## 6. Navegación
 
@@ -234,6 +236,7 @@ Componente `SpeciesPicker`, un `Modal` a pantalla completa (estilo `pageSheet` e
 - Cada fila muestra el nombre común (Fraunces 600, 16 px) y debajo el científico (`scientific`). Las especies que ya están en la colección del usuario muestran el ícono `leaf` en `secondary-600` y el texto "En tu colección"; así el usuario sabe si la foto le dará el bonus.
 - Sin resultados: "No encontramos esa especie."
 - Botón cerrar (`close`) arriba a la derecha; también cierran el gesto de bajar (iOS) y atrás (Android).
+- Si el catálogo no carga, el selector muestra el mensaje de error con "Reintentar" (§7).
 
 ### 7.6 Perfil
 
@@ -338,8 +341,9 @@ Se usan diálogos nativos (`Alert.alert`) con "Cancelar" a la izquierda y la acc
 ## 9. Accesibilidad
 
 - Contraste AA verificado (§2).
-- Todo botón de solo ícono tiene `accessibilityLabel` ("Voto positivo", "Voto negativo", "Eliminar publicación", "Cerrar sesión", "Cerrar cámara", "Tomar foto", "Cerrar") y `accessibilityRole="button"`. Los votos informan si están activos con `accessibilityState={{ selected }}`.
-- Cada foto tiene `accessibilityLabel`: "Foto de {nombre común} por {usuario}".
+- Todo botón de solo ícono tiene `accessibilityLabel` ("Voto positivo", "Voto negativo", "Eliminar publicación", "Cerrar sesión", "Cerrar cámara", "Tomar foto", "Cerrar", "Volver", "Mostrar contraseña" / "Ocultar contraseña") y `accessibilityRole="button"`; la pestaña Capturar, que solo tiene ícono, se anuncia como "Capturar". Los votos informan si están activos con `accessibilityState={{ selected }}`.
+- Cada foto tiene `accessibilityLabel`: "Foto de {nombre común} por {usuario}". En Nuevo avistamiento, mientras no hay especie elegida: "Foto recién tomada".
+- El avatar es decorativo (el nombre de usuario está al lado): el lector de pantalla no lo anuncia.
 - El estado nunca se comunica solo con color: votos (contorno o relleno), ocultas (insignia con texto) y errores (texto).
 - Áreas táctiles de al menos 44 × 44 px (§4); tamaño de letra del sistema (§3); reducción de movimiento (§5).
 

@@ -157,6 +157,7 @@ CREATE TABLE votes (
 - **Proporciones:** NativeWind traduce `aspect-[N/M]` con N≠M a un `aspectRatio` de texto (`"4 / 3"`) que Yoga ignora, y la imagen queda con alto 0. Se usa `style={{ aspectRatio: 4 / 3 }}`; `aspect-square` sí funciona.
 - **Fuentes:** en React Native cada peso es una familia distinta: una clase por peso (`font-display`, `font-sans-semibold`, `font-scientific`), sin combinar con `font-bold`/`font-semibold`.
 - **Colores en props:** ningún componente escribe hexadecimales. Si un prop necesita el color directo (íconos, `ActivityIndicator`, barra de pestañas), se importa `src/theme/colors.js`, que debe incluir todos los tokens que el código usa (también `white`).
+- **Letra grande:** contenedores con texto con `min-h-*` (nunca `h-*`); `shrink` en todo texto que comparte un `flex-row` con otro elemento; `flex-wrap` en filas de botones; `tabBarAllowFontScaling: false` en las pestañas y `allowFontScaling={false}` solo en la inicial del avatar.
 
 ## 9. Calidad
 

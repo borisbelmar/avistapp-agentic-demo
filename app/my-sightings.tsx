@@ -30,6 +30,7 @@ export default function MySightingsScreen() {
   const [busy, setBusy] = useState<Busy | null>(null);
   const [pickerFor, setPickerFor] = useState<string | null>(null);
   const [species, setSpecies] = useState<SpeciesListItem[] | null>(null);
+  const [speciesError, setSpeciesError] = useState<string | null>(null);
 
   const load = useCallback(async () => {
     if (!user) return;
@@ -48,16 +49,20 @@ export default function MySightingsScreen() {
   );
 
   // La lista se vuelve a leer en cada apertura: "En tu colección" refleja los cambios recién hechos.
-  async function openPicker(id: string) {
+  async function loadSpecies() {
     if (!user) return;
     setSpecies(null);
-    setPickerFor(id);
+    setSpeciesError(null);
     try {
       setSpecies(await listSpecies(db, user));
     } catch (e) {
-      setPickerFor(null);
-      Alert.alert(errorMessage(e));
+      setSpeciesError(errorMessage(e));
     }
+  }
+
+  function openPicker(id: string) {
+    setPickerFor(id);
+    loadSpecies();
   }
 
   async function onSelect(s: SpeciesListItem) {
@@ -99,7 +104,7 @@ export default function MySightingsScreen() {
         >
           <Ionicons name="chevron-back" size={24} color={colors.ink.DEFAULT} />
         </Pressable>
-        <Text className="font-display text-title text-ink">Mis publicaciones</Text>
+        <Text className="shrink font-display text-title text-ink">Mis publicaciones</Text>
       </View>
       {error ? (
         <EmptyState message={error} actionTitle="Reintentar" onAction={load} />
@@ -142,7 +147,7 @@ export default function MySightingsScreen() {
                     ) : null}
                   </View>
                 </View>
-                <View className="flex-row justify-between gap-3">
+                <View className="flex-row flex-wrap justify-between gap-3">
                   <Button
                     title="Cambiar especie"
                     variant="secondary"
@@ -173,6 +178,8 @@ export default function MySightingsScreen() {
       <SpeciesPicker
         visible={pickerFor !== null}
         species={species}
+        error={speciesError}
+        onRetry={loadSpecies}
         onClose={() => setPickerFor(null)}
         onSelect={onSelect}
       />

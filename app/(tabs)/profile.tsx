@@ -107,9 +107,9 @@ export default function ProfileScreen() {
                 </Text>
               </View>
               <View>
-                <View className="flex-row items-center justify-between">
+                <View className="flex-row items-center justify-between gap-2">
                   <Text className="font-sans-semibold text-label text-ink">Colección</Text>
-                  <Text className="font-sans text-caption text-ink-muted">{progressText}</Text>
+                  <Text className="shrink text-right font-sans text-caption text-ink-muted">{progressText}</Text>
                 </View>
                 <ProgressBar progress={profile.progress} />
               </View>

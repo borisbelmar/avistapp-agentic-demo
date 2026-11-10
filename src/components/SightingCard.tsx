@@ -56,7 +56,7 @@ export function SightingCard({ item, isOwn, isAdmin, voting, onVote, onDelete }:
           <Text className="font-scientific text-scientific text-ink-muted">{item.scientificName}</Text>
           <View className="flex-row items-center gap-2">
             <Ionicons name="location-outline" size={16} color={colors.ink.muted} />
-            <Text className="font-sans text-caption text-ink-muted">{formatCoords(item)}</Text>
+            <Text className="shrink font-sans text-caption text-ink-muted">{formatCoords(item)}</Text>
           </View>
           {item.isHidden ? (
             <View className="mt-2 flex-row">
@@ -65,7 +65,7 @@ export function SightingCard({ item, isOwn, isAdmin, voting, onVote, onDelete }:
           ) : isOwn ? (
             <View className="mt-2 flex-row items-center gap-2">
               <Text className="font-display text-body text-ink">{formatScore(item.score)}</Text>
-              <Text className="font-sans text-caption text-ink-muted">Tu publicación</Text>
+              <Text className="shrink font-sans text-caption text-ink-muted">Tu publicación</Text>
             </View>
           ) : (
             <View className="mt-2 flex-row">

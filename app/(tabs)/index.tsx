@@ -2,6 +2,7 @@ import { router, useFocusEffect, useLocalSearchParams } from "expo-router";
 import { useSQLiteContext } from "expo-sqlite";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ActivityIndicator, Alert, FlatList, RefreshControl, View } from "react-native";
+import { useReducedMotion } from "react-native-reanimated";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { useSession } from "@/auth/SessionProvider";
@@ -21,6 +22,7 @@ export default function FeedScreen() {
   const { user } = useSession();
   const { publishedId, newSpecies } = useLocalSearchParams<{ publishedId?: string; newSpecies?: string }>();
   const listRef = useRef<FlatList<FeedItem>>(null);
+  const reduceMotion = useReducedMotion();
 
   const [items, setItems] = useState<FeedItem[] | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -79,8 +81,8 @@ export default function FeedScreen() {
 
   // Si el Muro estaba desplazado, la publicación nueva queda a la vista.
   useEffect(() => {
-    if (publishedId) listRef.current?.scrollToOffset({ offset: 0, animated: true });
-  }, [publishedId]);
+    if (publishedId) listRef.current?.scrollToOffset({ offset: 0, animated: !reduceMotion });
+  }, [publishedId, reduceMotion]);
 
   return (
     <SafeAreaView edges={["top"]} className="flex-1 bg-paper">

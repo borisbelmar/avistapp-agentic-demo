@@ -13,6 +13,7 @@ Los documentos de `docs/` mandan sobre el código. Léelos antes de cambiar algo
 | `docs/3_STACK.md` | Paquetes, estructura, esquema SQL, auth, fotos, navegación y advertencias conocidas |
 | `docs/4_DESIGN.md` | Colores, tipografía, pantallas, **textos de la interfaz** (§8) y accesibilidad |
 | `docs/5_MVP.md` | Fases, criterios de aceptación y estado de avance (§3) |
+| `docs/6_CIERRE.md` | Guion del recorrido final, checklist de criterios [dispositivo] y revisión de accesibilidad (Fase 9) |
 
 Referencias como **SG6** o **DESIGN §7.2** apuntan a reglas y secciones de esos documentos.
 

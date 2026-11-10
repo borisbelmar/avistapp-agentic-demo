@@ -75,7 +75,7 @@ Estados: **Pendiente** → **En curso** → **En revisión** → **Aprobada**. Q
 | 6 | Votos y moderación | Votar, ocultar y moderar desde el Muro | Aprobada |
 | 7 | Perfil y colección | Puntaje desglosado y colección en el Perfil | Aprobada |
 | 8 | Mis publicaciones | Cambiar la especie y eliminar publicaciones propias | Aprobada |
-| 9 | Cierre | Recorrido completo aprobado en Android e iPhone | Pendiente |
+| 9 | Cierre | Recorrido completo aprobado en Android e iPhone | Aprobada |
 
 ## 4. Fases
 
@@ -317,6 +317,7 @@ Estados: **Pendiente** → **En curso** → **En revisión** → **Aprobada**. Q
 - Estados de carga, error ("Reintentar") y vacío en todas las pantallas que cargan datos (DESIGN §7).
 - `npx expo-doctor` sin problemas.
 - Preparar para la persona un guion del recorrido completo y la lista de criterios **[dispositivo]** de fases anteriores que sigan pendientes.
+- Guion y revisión: [`6_CIERRE.md`](6_CIERRE.md).
 
 **Criterios de aceptación:**
 - **[auto]** Definición de terminado (§2) y `npx expo-doctor` sin problemas.

@@ -10,21 +10,26 @@ import {
   TextInput,
   View,
 } from "react-native";
+import { useReducedMotion } from "react-native-reanimated";
 
 import type { SpeciesListItem } from "@/data/species";
 import colors from "@/theme/colors";
 
+import { EmptyState } from "./EmptyState";
 import { normalizeForSearch } from "./format";
 
 type SpeciesPickerProps = {
   visible: boolean;
   species: SpeciesListItem[] | null;
+  error: string | null;
+  onRetry: () => void;
   onSelect: (species: SpeciesListItem) => void;
   onClose: () => void;
 };
 
 // Selector de especie (DESIGN §7.5): Modal a pantalla completa, pageSheet en iOS.
-export function SpeciesPicker({ visible, species, onSelect, onClose }: SpeciesPickerProps) {
+export function SpeciesPicker({ visible, species, error, onRetry, onSelect, onClose }: SpeciesPickerProps) {
+  const reduceMotion = useReducedMotion();
   const [query, setQuery] = useState("");
   const [focused, setFocused] = useState(false);
 
@@ -36,7 +41,7 @@ export function SpeciesPicker({ visible, species, onSelect, onClose }: SpeciesPi
   return (
     <Modal
       visible={visible}
-      animationType="slide"
+      animationType={reduceMotion ? "none" : "slide"}
       presentationStyle="pageSheet"
       allowSwipeDismissal
       onRequestClose={onClose}
@@ -44,7 +49,7 @@ export function SpeciesPicker({ visible, species, onSelect, onClose }: SpeciesPi
       <View className="flex-1 bg-paper">
         {/* pageSheet en iOS no queda bajo la barra de estado; en Android el Modal es de borde a borde. */}
         <View className={`flex-row items-center justify-between px-4 pb-2 ${Platform.OS === "ios" ? "pt-4" : "pt-14"}`}>
-          <Text className="font-display text-title text-ink">Elige la especie</Text>
+          <Text className="shrink font-display text-title text-ink">Elige la especie</Text>
           <Pressable
             onPress={onClose}
             className="h-11 w-11 items-center justify-center"
@@ -65,12 +70,14 @@ export function SpeciesPicker({ visible, species, onSelect, onClose }: SpeciesPi
             placeholderTextColor={colors.ink.muted}
             autoCorrect={false}
             autoCapitalize="none"
-            className={`h-12 rounded-xl bg-white px-4 font-sans text-[16px] text-ink ${
+            className={`min-h-12 rounded-xl bg-white px-4 font-sans text-[16px] text-ink ${
               focused ? "border-2 border-primary-600" : "border border-line-strong"
             }`}
           />
         </View>
-        {species === null ? (
+        {error ? (
+          <EmptyState message={error} actionTitle="Reintentar" onAction={onRetry} />
+        ) : species === null ? (
           <View className="mt-8">
             <ActivityIndicator color={colors.primary[600]} />
           </View>
@@ -95,7 +102,7 @@ export function SpeciesPicker({ visible, species, onSelect, onClose }: SpeciesPi
                 {item.inCollection ? (
                   <View className="flex-row items-center gap-1">
                     <Ionicons name="leaf" size={16} color={colors.secondary[600]} />
-                    <Text className="font-sans text-caption text-secondary-700">En tu colección</Text>
+                    <Text className="shrink font-sans text-caption text-secondary-700">En tu colección</Text>
                   </View>
                 ) : null}
               </Pressable>

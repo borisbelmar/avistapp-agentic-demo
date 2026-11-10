@@ -98,6 +98,7 @@ docs/         Documentación del producto
 | [`3_STACK.md`](docs/3_STACK.md) | Stack técnico, persistencia, navegación y advertencias conocidas |
 | [`4_DESIGN.md`](docs/4_DESIGN.md) | Diseño visual, pantallas, textos y accesibilidad |
 | [`5_MVP.md`](docs/5_MVP.md) | Fases del MVP, criterios de aceptación y avance |
+| [`6_CIERRE.md`](docs/6_CIERRE.md) | Guion del recorrido final y revisión de accesibilidad |
 | [`AGENTS.md`](AGENTS.md) | Instrucciones para agentes de código que trabajen en el repositorio |
 
 ## Limitaciones de la etapa 1

@@ -39,12 +39,12 @@ export function Button({ title, onPress, variant = "primary", loading = false, d
       disabled={disabled || loading}
       accessibilityRole="button"
       accessibilityState={{ disabled: disabled || loading, busy: loading }}
-      className={`h-12 flex-row items-center justify-center rounded-full px-6 ${container} ${disabled ? "opacity-40" : ""}`}
+      className={`min-h-12 flex-row items-center justify-center rounded-full px-6 py-2 ${container} ${disabled ? "opacity-40" : ""}`}
     >
       {loading ? (
         <ActivityIndicator color={spinner} />
       ) : (
-        <Text className={`font-sans-semibold text-label ${text}`}>{title}</Text>
+        <Text className={`text-center font-sans-semibold text-label ${text}`}>{title}</Text>
       )}
     </Pressable>
   );
