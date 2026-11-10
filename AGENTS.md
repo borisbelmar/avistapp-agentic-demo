@@ -93,6 +93,7 @@ Cada una costó un error real. El detalle está en la sección indicada.
 - **Promesas nativas:** siempre con `await` dentro del `try`; si no, terminan en `Uncaught (in promise)` (STACK §6).
 - **`errorMessage`** registra con `console.error` todo error que no sea `DomainError`. La cámara, que usa textos propios, registra el error ella misma (STACK §6).
 - **SG1a:** `createSighting` inserta la fila, luego escribe la foto y, si la escritura falla, borra la fila y relanza el error. La foto de origen no se toca hasta confirmar (STACK §7).
+- **Transacciones:** `withExclusiveTransactionAsync` abre otra conexión sin `PRAGMA foreign_keys`: dentro de `txn` no corre `ON DELETE CASCADE`; borra los hijos a mano (STACK §4).
 - **Navegación:** cada `Stack.Screen` con sesión declara `presentation`. `capture` y `publish` son `fullScreenModal`; una pantalla `card` encima de un modal queda invisible. Para salir del flujo al publicar, usa `router.dismissTo({ pathname: "/(tabs)", params })`, no `router.replace` (STACK §10).
 - **Proporciones:** `aspect-[4/3]` deja la imagen con alto 0; usa `style={{ aspectRatio: 4 / 3 }}`. `aspect-square` sí funciona (STACK §8).
 - **Fuentes:** una clase por peso (`font-display`, `font-sans-semibold`, `font-scientific`); no las combines con `font-bold`/`font-semibold` (STACK §8).
@@ -101,6 +102,7 @@ Cada una costó un error real. El detalle está en la sección indicada.
 - **Sesión en iOS:** el llavero sobrevive a la desinstalación, así que `restoreSession` verifica que el usuario exista (STACK §5).
 - **React Compiler:** el lint marca `sharedValue.value = …`. Desactívalo solo en esa línea y explica el motivo.
 - Los parámetros de ruta (`useLocalSearchParams`) son siempre texto.
+- **Mocks en pruebas:** `jest-expo` mockea `expo-file-system/legacy` con un *stub* fijo que oculta el manual mock de `__mocks__/`; `jest.setup.ts` lo vuelve a mockear después para que el sistema de archivos en memoria real tome efecto (STACK §9).
 
 ## Verificación
 

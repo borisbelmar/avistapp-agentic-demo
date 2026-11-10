@@ -15,13 +15,14 @@ const PLACEHOLDER_PHOTOS = [
   "iVBORw0KGgoAAAANSUhEUgAAAEAAAAAwCAIAAAAuKetIAAAAbElEQVR4nO3RQQ0AIAwEQQQjr0pQhAgeE5JNTkA7u87sr7f4BT2gCSugCSugCSugCSugCSugCSugCSugCSugCSugCSugCSugCSugCSugCSugCSugCSugCSugCSugCSugCSugCSugCSswXvFlF+2DWVr3weOjAAAAAElFTkSuQmCC", // trigo
 ];
 
-type UserKey = "admin" | "ana" | "pedro" | "camila" | "javier";
+type UserKey = "admin" | "ana" | "pedro" | "camila" | "javier" | "sofia";
 
 const TEST_USERS: { key: Exclude<UserKey, "admin">; username: string; email: string }[] = [
   { key: "ana", username: "ana_aves", email: "ana@avistapp.test" },
   { key: "pedro", username: "pedro_birder", email: "pedro@avistapp.test" },
   { key: "camila", username: "camila_fotos", email: "camila@avistapp.test" },
   { key: "javier", username: "javier_sur", email: "javier@avistapp.test" },
+  { key: "sofia", username: "sofia_campo", email: "sofia@avistapp.test" },
 ];
 const TEST_PASSWORD = "avistapp-test";
 
@@ -38,7 +39,8 @@ type TestSighting = {
 
 // Variedad de especies, ubicaciones, fechas relativas (minutos, horas, días y la fecha corta a
 // partir de 7 días) y puntajes: las dos publicaciones del admin quedan con +4 y −1, visibles de
-// inmediato al iniciar sesión como admin (5_MVP.md §6), sin esperar los votos de la Fase 6.
+// inmediato al iniciar sesión como admin (5_MVP.md §6); una de ana queda en −4: sofia_campo,
+// que no votó, la oculta con un voto negativo (Fase 6).
 const TEST_SIGHTINGS: TestSighting[] = [
   {
     author: "ana",
@@ -115,6 +117,19 @@ const TEST_SIGHTINGS: TestSighting[] = [
     minutesAgo: 7200,
     photo: 2,
     votes: [],
+  },
+  {
+    author: "ana",
+    speciesId: "sephanoides-sephaniodes", // Picaflor chico
+    location: { latitude: -39.8142, longitude: -73.2459 }, // Valdivia
+    minutesAgo: 45,
+    photo: 2,
+    votes: [
+      { voter: "pedro", value: -1 },
+      { voter: "camila", value: -1 },
+      { voter: "javier", value: -1 },
+      { voter: "admin", value: -1 },
+    ],
   },
 ];
 

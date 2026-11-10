@@ -74,6 +74,7 @@ Reglas de dependencia:
 - `VoteValue` se guarda como entero: `UP = 1`, `DOWN = -1`.
 - Los valores derivados (`score`, `isHidden`, `collection`, `userScore`) se calculan con SQL en cada lectura, pasando `HIDE_THRESHOLD` y `SPECIES_BONUS` desde `src/domain` como parámetros. No se guardan.
 - Las escrituras que verifican una regla antes de escribir (por ejemplo `castVote`: existe, no está oculto, no es propio) se ejecutan dentro de `withExclusiveTransactionAsync`.
+- `withExclusiveTransactionAsync` abre una conexión nueva, sin el `PRAGMA foreign_keys` de `onInit`: dentro de `txn` no hay borrado en cascada ni verificación de claves foráneas. Los hijos se borran a mano (`deleteSighting` borra los votos) y `testDb` desactiva las claves foráneas dentro de sus transacciones para comportarse igual.
 
 ### Esquema
 
@@ -143,7 +144,7 @@ CREATE TABLE votes (
 - **Persistencia** (`createSighting`, SG1a): (1) valida y verifica reglas; (2) asegura la carpeta `documentDirectory + "photos/"` (`getInfoAsync` y, si no existe, `makeDirectoryAsync(…, { intermediates: true })`); (3) inserta la fila con `photoUrl = "photos/<id>.jpg"`; (4) escribe la foto con `writeAsStringAsync(uri, photoBase64, { encoding: "base64" })`; (5) si la escritura falla, borra la fila y relanza el error. Nunca se mueve ni se borra la foto de origen antes de confirmar la escritura: si un paso falla, el usuario puede reintentar con la misma foto.
 - Se usa solo `expo-file-system/legacy` (`documentDirectory`, `getInfoAsync`, `makeDirectoryAsync`, `writeAsStringAsync`, `deleteAsync`). La API de clases de `expo-file-system` (`File`, `Directory`, `Paths`) **no se usa**: en el emulador de Android sus métodos `move`, `copy` y `write` rechazaron con `Missing 'READ' permission`, porque su verificación de tipo exige permiso de lectura en toda operación.
 - `photoUrl` se guarda como ruta relativa (`photos/<id>.jpg`) y `src/data/photos.ts` (`resolvePhotoUrl`) la resuelve a `documentDirectory + photoUrl` al leer. En iOS la ruta absoluta del directorio de documentos puede cambiar entre actualizaciones de la app.
-- Al eliminar un avistamiento se borra primero la fila (los votos caen en cascada) y luego el archivo, si existe (`getInfoAsync` + `deleteAsync`).
+- Al eliminar un avistamiento se borran sus votos y la fila en una misma transacción (sin cascada dentro de `txn`, §4) y luego el archivo, si existe (`getInfoAsync` + `deleteAsync`).
 - Los textos de los permisos de cámara y ubicación se declaran en español en los *config plugins* de `app.json` (`expo-camera` → `cameraPermission`, `expo-location` → `locationWhenInUsePermission`).
 
 ## 8. UI
@@ -164,7 +165,7 @@ CREATE TABLE votes (
 - Pruebas con Jest y el preset `jest-expo` (`npm test`):
   - `src/domain`: funciones puras y esquemas zod.
   - `src/data` y `src/auth`: las reglas que viven en SQL se prueban contra SQLite en memoria con `better-sqlite3`. Un adaptador de prueba en `src/data/testing/` implementa la interfaz `Db` (`execAsync`, `runAsync`, `getFirstAsync`, `getAllAsync`, `withExclusiveTransactionAsync`) y aplica las mismas migraciones. Los módulos nativos (`expo-file-system/legacy`, `expo-secure-store`, `expo-crypto`) se reemplazan con *manual mocks* en `__mocks__/` (en la raíz), que Jest aplica automáticamente sin `jest.mock`.
-  - Los caminos de falla de un módulo nativo se prueban espiando el mock: `jest.spyOn(FileSystem, "writeAsStringAsync").mockRejectedValueOnce(...)` (así se prueba SG1a).
+  - Los caminos de falla de un módulo nativo se prueban espiando el mock: `jest.spyOn(FileSystem, "writeAsStringAsync").mockRejectedValueOnce(...)` (así se prueba SG1a). `jest-expo` mockea `expo-file-system/legacy` con su propio *stub* fijo (`getInfoAsync` siempre `exists: true`, sin `documentDirectory`) en su propio *setup file*, que oculta nuestro manual mock; `jest.setup.ts` (`setupFilesAfterEnv`) lo vuelve a mockear después, apuntando al manual mock real, para que el sistema de archivos en memoria funcione.
 - Cámara, GPS, permisos, fuentes, navegación y aspecto visual se verifican a mano en dispositivos físicos (§11), con los criterios de aceptación de `5_MVP.md`.
 - En shells no interactivos (agentes, CI), ejecutar los comandos con la entrada estándar cerrada; la primera ejecución de `npx expo lint` puede tardar mientras se crea la caché de ESLint.
 

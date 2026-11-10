@@ -22,8 +22,11 @@ export function openTestDb(): Db {
     async getAllAsync<T>(source: string, ...params: SQLiteBindValue[]) {
       return sqlite.prepare(source).all(...params) as T[];
     },
-    // ponytail: misma conexión, sin concurrencia; basta para probar reglas y rollback.
+    // Igual que expo-sqlite, que abre una conexión nueva sin el PRAGMA foreign_keys de initDb:
+    // dentro de txn no hay cascadas ni verificación de claves foráneas. Misma conexión y sin
+    // concurrencia; basta para probar reglas y rollback.
     async withExclusiveTransactionAsync(task) {
+      sqlite.pragma("foreign_keys = OFF");
       sqlite.exec("BEGIN");
       try {
         await task(db);
@@ -31,6 +34,8 @@ export function openTestDb(): Db {
       } catch (e) {
         sqlite.exec("ROLLBACK");
         throw e;
+      } finally {
+        sqlite.pragma("foreign_keys = ON");
       }
     },
   };

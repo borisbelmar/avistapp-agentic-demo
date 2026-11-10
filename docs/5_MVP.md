@@ -72,7 +72,7 @@ Estados: **Pendiente** → **En curso** → **En revisión** → **Aprobada**. Q
 | 3 | Login y registro | Crear cuenta, iniciar y cerrar sesión; pestañas Muro y Perfil | Aprobada |
 | 4 | Cámara y ubicación | Tomar una foto con GPS y verla en Nuevo avistamiento | Aprobada |
 | 5 | Publicar avistamiento | Publicar y ver la publicación primera en el Muro | Aprobada |
-| 6 | Votos y moderación | Votar, ocultar y moderar desde el Muro | Pendiente |
+| 6 | Votos y moderación | Votar, ocultar y moderar desde el Muro | Aprobada |
 | 7 | Perfil y colección | Puntaje desglosado y colección en el Perfil | Pendiente |
 | 8 | Mis publicaciones | Cambiar la especie y eliminar publicaciones propias | Pendiente |
 | 9 | Cierre | Recorrido completo aprobado en Android e iPhone | Pendiente |
@@ -252,8 +252,8 @@ Estados: **Pendiente** → **En curso** → **En revisión** → **Aprobada**. Q
 
 **Trampas conocidas:**
 - Ocultar es definitivo (V5): en un avistamiento oculto no se vota, ni se cambia ni se retira un voto.
-- Con el React Compiler activo, el lint marca `sharedValue.value = …`; se desactiva solo en esa línea, explicando el motivo.
-- Probar el ocultamiento en el dispositivo requiere seis cuentas: lo cubren las pruebas automáticas.
+- Reanimated 4.7.1 expone `get()`/`set()` en `SharedValue`, pensados para el React Compiler: se usan en vez de `sharedValue.value = …`, sin desactivar ningún lint.
+- Ocultar requiere seis cuentas: los datos de desarrollo traen sofia_campo y una publicación en −4 (§6); las reglas las cubren las pruebas automáticas.
 
 **Criterios de aceptación:**
 - **[auto]** Votar dos veces cambia el valor, no duplica el voto (V1). Votar el propio avistamiento → `OWN_SIGHTING` (V3).
@@ -336,7 +336,7 @@ Estados: **Pendiente** → **En curso** → **En revisión** → **Aprobada**. Q
 | Una pantalla queda oculta detrás de un modal, o publicar vuelve a la cámara | `presentation` explícita en cada pantalla y `router.dismissTo` al salir del flujo modal (STACK §10) |
 | Un error nativo se ve solo como "Algo salió mal" y no se puede diagnosticar | `errorMessage` y la cámara registran el error original con `console.error` (STACK §6) |
 | Una fase crece y mezcla trabajo de otras | Plan aprobado antes de implementar y alcance limitado a la fase (§2) |
-| Probar el ocultamiento en el dispositivo requiere seis cuentas | Cubierto por pruebas automáticas (Fase 6); en el dispositivo basta un recorrido |
+| Probar el ocultamiento en el dispositivo requiere seis cuentas | Pruebas automáticas (Fase 6) y datos de desarrollo con seis cuentas y una publicación en −4 (§6) |
 | El catálogo tiene errores o nombres que no se usan en Chile | Pruebas de integridad de `species.json` y revisión de una persona (Fase 2) |
 | En iOS la sesión sobrevive a la desinstalación | `restoreSession` verifica que el usuario exista (Fase 3) |
 | Las fotos llenan el almacenamiento | Calidad 0.7 al capturar; la foto se borra al eliminar la publicación |
@@ -362,5 +362,6 @@ Cada vez que la app inicia en desarrollo (`__DEV__`), `seedDevData` (`src/data/d
 | pedro_birder | `pedro@avistapp.test` | `avistapp-test` |
 | camila_fotos | `camila@avistapp.test` | `avistapp-test` |
 | javier_sur | `javier@avistapp.test` | `avistapp-test` |
+| sofia_campo | `sofia@avistapp.test` | `avistapp-test` |
 
-Siete avistamientos repartidos entre estos usuarios y el administrador, con fotos de prueba (bloques de color generados sin red) y votos variados; dos son del administrador, con puntaje +4 y −1, visibles de inmediato en el Muro.
+Ocho avistamientos repartidos entre estos usuarios y el administrador, con fotos de prueba (bloques de color generados sin red) y votos variados; dos son del administrador, con puntaje +4 y −1, visibles de inmediato en el Muro. Uno de ana_aves (Picaflor chico) queda en −4: con sofia_campo, un voto negativo lo oculta y sale del Muro; después el administrador lo ve como "Oculta".

@@ -4,8 +4,9 @@ import type { z } from "zod";
 
 import { HIDE_THRESHOLD } from "@/domain/constants";
 import { DomainError, type ErrorCode } from "@/domain/errors";
+import { isHidden } from "@/domain/rules";
 import { createSightingSchema } from "@/domain/schemas";
-import type { Actor } from "@/domain/types";
+import type { Actor, VoteValue } from "@/domain/types";
 
 import type { Db } from "./db";
 import { ensurePhotosDir, PHOTOS_DIR, resolvePhotoUrl } from "./photos";
@@ -96,22 +97,90 @@ export type FeedItem = {
   capturedAt: string;
   createdAt: string;
   score: number;
+  myVote: VoteValue | null;
+  isHidden: boolean;
 };
 
-// getFeed (DOMAIN §6, Q1): el muro, de la publicación más reciente a la más antigua.
-// Q2 (ocultos para ADMIN) y Q3 (voto del actor) llegan en la Fase 6; actor ya está en la firma
-// del caso de uso, sin uso todavía.
+// getFeed (DOMAIN §6, Q1–Q3): el muro, de la publicación más reciente a la más antigua. Los
+// ocultos solo llegan al ADMIN (Q2), marcados con isHidden; el puntaje y el voto del actor se
+// calculan en SQL (Q3).
 export async function getFeed(db: Db, actor: Actor): Promise<FeedItem[]> {
-  const rows = await db.getAllAsync<FeedItem>(
+  const rows = await db.getAllAsync<Omit<FeedItem, "isHidden">>(
     `SELECT g.id, g.authorId, u.username AS authorUsername, g.speciesId, s.commonName, s.scientificName,
-      g.photoUrl, g.latitude, g.longitude, g.capturedAt, g.createdAt, ${SCORE_SQL} AS score
+      g.photoUrl, g.latitude, g.longitude, g.capturedAt, g.createdAt, ${SCORE_SQL} AS score,
+      (SELECT v.value FROM votes v WHERE v.sightingId = g.id AND v.userId = ?) AS myVote
      FROM sightings g
      JOIN users u ON u.id = g.authorId
      JOIN species s ON s.id = g.speciesId
-     WHERE ${SCORE_SQL} > ?
+     WHERE ? = 'ADMIN' OR ${SCORE_SQL} > ?
      ORDER BY g.createdAt DESC`,
+    actor.id,
+    actor.role,
     HIDE_THRESHOLD,
   );
 
-  return rows.map((row) => ({ ...row, photoUrl: resolvePhotoUrl(row.photoUrl) }));
+  return rows.map((row) => ({ ...row, photoUrl: resolvePhotoUrl(row.photoUrl), isHidden: isHidden(row.score) }));
+}
+
+// V5: en un avistamiento oculto no se emite, cambia ni retira un voto.
+async function findVotableSighting(txn: Db, sightingId: string): Promise<{ authorId: string }> {
+  const row = await txn.getFirstAsync<{ authorId: string; score: number }>(
+    `SELECT g.authorId, ${SCORE_SQL} AS score FROM sightings g WHERE g.id = ?`,
+    sightingId,
+  );
+  if (!row) throw new DomainError("SIGHTING_NOT_FOUND");
+  if (isHidden(row.score)) throw new DomainError("SIGHTING_HIDDEN");
+  return row;
+}
+
+// castVote (DOMAIN §6, V1–V6, SG6): crea el voto del actor sobre el avistamiento o cambia su
+// valor si ya existía (V1); nunca sobre el propio (V3) ni sobre uno oculto (V5).
+export async function castVote(db: Db, actor: Actor, sightingId: string, value: VoteValue): Promise<void> {
+  await db.withExclusiveTransactionAsync(async (txn) => {
+    const { authorId } = await findVotableSighting(txn, sightingId);
+    if (authorId === actor.id) throw new DomainError("OWN_SIGHTING");
+    await txn.runAsync(
+      `INSERT INTO votes (userId, sightingId, value) VALUES (?, ?, ?)
+       ON CONFLICT (userId, sightingId) DO UPDATE SET value = excluded.value`,
+      actor.id,
+      sightingId,
+      value,
+    );
+  });
+}
+
+// removeVote (DOMAIN §6, V4, V5): retira el voto del actor; nunca sobre un avistamiento oculto.
+export async function removeVote(db: Db, actor: Actor, sightingId: string): Promise<void> {
+  await db.withExclusiveTransactionAsync(async (txn) => {
+    await findVotableSighting(txn, sightingId);
+    const { changes } = await txn.runAsync(
+      "DELETE FROM votes WHERE userId = ? AND sightingId = ?",
+      actor.id,
+      sightingId,
+    );
+    if (changes === 0) throw new DomainError("VOTE_NOT_FOUND");
+  });
+}
+
+// deleteSighting (DOMAIN §6, SG4, C4): solo el autor o un ADMIN. Borra los votos y la fila en la
+// misma transacción y después el archivo de la foto, si existe (STACK §7). Los votos se borran a
+// mano porque la conexión de txn no tiene PRAGMA foreign_keys y el ON DELETE CASCADE no corre
+// (STACK §4).
+export async function deleteSighting(db: Db, actor: Actor, sightingId: string): Promise<void> {
+  const deleted: { photoUrl?: string } = {};
+  await db.withExclusiveTransactionAsync(async (txn) => {
+    const row = await txn.getFirstAsync<{ authorId: string; photoUrl: string }>(
+      "SELECT authorId, photoUrl FROM sightings WHERE id = ?",
+      sightingId,
+    );
+    if (!row) throw new DomainError("SIGHTING_NOT_FOUND");
+    if (row.authorId !== actor.id && actor.role !== "ADMIN") throw new DomainError("FORBIDDEN");
+    await txn.runAsync("DELETE FROM votes WHERE sightingId = ?", sightingId);
+    await txn.runAsync("DELETE FROM sightings WHERE id = ?", sightingId);
+    deleted.photoUrl = row.photoUrl;
+  });
+  if (deleted.photoUrl === undefined) return;
+  const uri = resolvePhotoUrl(deleted.photoUrl);
+  const info = await FileSystem.getInfoAsync(uri);
+  if (info.exists) await FileSystem.deleteAsync(uri);
 }
