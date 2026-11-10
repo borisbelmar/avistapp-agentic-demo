@@ -51,3 +51,11 @@ export function normalizeForSearch(text: string): string {
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase();
 }
+
+// Orden por nombre común sin distinguir tildes ni mayúsculas: el orden binario de SQLite deja
+// "Águila" después de "Zorzal".
+export function compareCommonName(a: { commonName: string }, b: { commonName: string }): number {
+  const an = normalizeForSearch(a.commonName);
+  const bn = normalizeForSearch(b.commonName);
+  return an < bn ? -1 : an > bn ? 1 : 0;
+}

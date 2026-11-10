@@ -1,4 +1,4 @@
-import { normalizeForSearch } from "@/components/format";
+import { compareCommonName } from "@/components/format";
 import { HIDE_THRESHOLD } from "@/domain/constants";
 import type { Actor, Species } from "@/domain/types";
 
@@ -24,12 +24,7 @@ export async function listSpecies(db: Db, actor: Actor): Promise<SpeciesListItem
     HIDE_THRESHOLD,
   );
 
-  // El orden binario de SQLite deja "Águila" después de "Zorzal": se ordena en TypeScript.
   return rows
     .map((row) => ({ ...row, inCollection: row.inCollection === 1 }))
-    .sort((a, b) => {
-      const an = normalizeForSearch(a.commonName);
-      const bn = normalizeForSearch(b.commonName);
-      return an < bn ? -1 : an > bn ? 1 : 0;
-    });
+    .sort(compareCommonName);
 }

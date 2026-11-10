@@ -7,6 +7,7 @@ import type { VoteValue } from "@/domain/types";
 import colors from "@/theme/colors";
 
 import { Avatar } from "./Avatar";
+import { Badge } from "./Badge";
 import { formatCoords, formatRelativeDate, formatScore } from "./format";
 import { VoteControl } from "./VoteControl";
 
@@ -59,9 +60,7 @@ export function SightingCard({ item, isOwn, isAdmin, voting, onVote, onDelete }:
           </View>
           {item.isHidden ? (
             <View className="mt-2 flex-row">
-              <View className="rounded-full bg-line px-3 py-1">
-                <Text className="font-sans-semibold text-caption text-ink-muted">Oculta</Text>
-              </View>
+              <Badge label="Oculta" />
             </View>
           ) : isOwn ? (
             <View className="mt-2 flex-row items-center gap-2">
