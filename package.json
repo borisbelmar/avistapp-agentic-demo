@@ -39,23 +39,32 @@
     "@types/better-sqlite3": "^9.6.0",
     "@types/jest": "30.0.0",
     "@types/react": "~19.3.0",
+    "appium": "^4.0.1",
+    "appium-uiautomator2-driver": "^10.1.0",
     "better-sqlite3": "^13.0.3",
     "eslint": "^9.0.0",
     "eslint-config-expo": "~58.0.4",
     "jest": "~30.5.2",
     "jest-expo": "~58.0.14",
-    "typescript": "~6.0.3"
+    "typescript": "~6.0.3",
+    "webdriverio": "^10.2.0"
   },
   "jest": {
     "preset": "jest-expo",
-    "setupFilesAfterEnv": ["<rootDir>/jest.setup.ts"]
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.ts"
+    ]
   },
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "lint": "expo lint",
-    "test": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests",
+    "test:coverage": "jest --coverage --passWithNoTests",
+    "test:e2e": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config e2e/jest.config.js --runInBand",
+    "appium": "appium",
+    "appium:drivers": "appium driver install uiautomator2"
   },
   "private": true
 }
