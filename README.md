@@ -75,6 +75,8 @@ npx expo-doctor    # compatibilidad de dependencias con la SDK
 
 Cámara, GPS, permisos, fuentes, navegación y aspecto visual se verifican a mano en un Android y un iPhone físicos.
 
+El login tiene pruebas E2E con Appium sobre un emulador de Android (`npm run test:e2e`). Necesitan un APK de depuración, Metro y el servidor de Appium corriendo: ver [`e2e/README.md`](e2e/README.md).
+
 ## Estructura
 
 ```
@@ -86,6 +88,7 @@ src/components/  Componentes de UI y formato de textos
 src/theme/    Paleta de colores (compartida con Tailwind)
 assets/       Catálogo de especies (species.json) y recursos
 __mocks__/    Mocks de módulos nativos para Jest
+e2e/          Pruebas E2E con Appium (login)
 docs/         Documentación del producto
 ```
 

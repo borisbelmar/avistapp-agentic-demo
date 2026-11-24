@@ -36,6 +36,8 @@ npx expo start                 # servidor Metro para Expo Go
 npx tsc --noEmit               # tipos
 npx expo lint                  # ESLint (configuración de Expo)
 npm test                       # Jest (preset jest-expo)
+npm run appium                 # servidor de Appium para las pruebas E2E
+npm run test:e2e               # E2E con Appium (necesita Metro, Appium y emulador; ver e2e/README.md)
 npx expo-doctor                # compatibilidad con la SDK
 npx expo install <paquete>     # paquetes de Expo / React Native
 npx expo install <paquete> -- --save-dev   # dependencias de desarrollo de Expo
@@ -58,6 +60,7 @@ src/components/       Componentes de UI y format.ts (fechas, coordenadas, puntaj
 src/theme/colors.js   Paleta única, compartida con tailwind.config.js
 assets/species.json   Catálogo para el seed
 __mocks__/            Manual mocks de módulos nativos (en la raíz)
+e2e/                  Pruebas E2E con Appium + webdriverio y su propia config de Jest
 ```
 
 - `src/domain` no importa nada del resto del proyecto ni de React Native.
@@ -104,6 +107,8 @@ Cada una costó un error real. El detalle está en la sección indicada.
 - **React Compiler:** el lint marca `sharedValue.value = …`. Desactívalo solo en esa línea y explica el motivo.
 - Los parámetros de ruta (`useLocalSearchParams`) son siempre texto.
 - **Mocks en pruebas:** `jest-expo` mockea `expo-file-system/legacy` con un *stub* fijo que oculta el manual mock de `__mocks__/`; `jest.setup.ts` lo vuelve a mockear después para que el sistema de archivos en memoria real tome efecto (STACK §9).
+- **E2E (Appium):** el APK de depuración no trae el JS; sin `npx expo start` corriendo, la app abre en una pantalla de error. `test:e2e` necesita `--experimental-vm-modules` (`webdriverio` 10). En Android 17 el diálogo "dispositivos cercanos" (`ACCESS_LOCAL_NETWORK`) tapa la app; la sesión usa `autoGrantPermissions` (STACK §9, §11).
+- **Build nativo en Windows:** `gradlew assembleDebug` falla en `react-native-worklets` con `ninja: error: mkdir(...)` porque el ninja 1.10.2 del SDK no maneja rutas de más de 260 caracteres; reemplázalo por ninja ≥ 1.12 (STACK §11).
 
 ## Verificación
 
